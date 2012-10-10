@@ -1,0 +1,13 @@
+This repository is used to config vim on a new machine.
+
+Notes:
+
+1) pathogen.vim usage:
+    a. Install in ~/.vim/autoload (~\vimfiles\autoload on Windows)
+    b. Add: call pathogen#infect() in vimrc
+    c. Put other plugins in ~/.vim/bundle (unzip/untar/svn-checkout/git-clone)
+    d. To generate help files, type :call pathogen#helptags() in vim
+
+2) Please change vimrc and dbs.vim's fileformat in different OSs
+set fileformat=UNIX|DOS|MAC
+:w
