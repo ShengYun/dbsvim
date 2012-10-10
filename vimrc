@@ -169,7 +169,9 @@ set statusline=[%n]%<%f%y%h%m[%{&fenc!=''?&fenc:&enc}:%{&ff}]%r%=[%b\ 0x%B]\ %l\
 " set dir=$TEMP
 
 " Don't auto change dir
-set noautochdir
+" You should call this manualy after
+" opening fuzzyfinder
+" set noautochdir
 
 " Backup setting
 set nobackup
