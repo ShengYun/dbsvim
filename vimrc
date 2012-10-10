@@ -169,8 +169,9 @@ set statusline=[%n]%<%f%y%h%m[%{&fenc!=''?&fenc:&enc}:%{&ff}]%r%=[%b\ 0x%B]\ %l\
 " set dir=$TEMP
 
 " Don't auto change dir
-" You should call this manualy after
-" opening fuzzyfinder
+" You should call noautochdir manualy after
+" opening your gvim window
+set autochdir
 " set noautochdir
 
 " Backup setting
