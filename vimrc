@@ -258,11 +258,37 @@ nmap <F4> :Tlist<CR>
 let g:Tlist_WinWidth = 50
 let g:Tlist_Use_Right_Window = 1
 
-" Refresh cscope with Ctrl+F5
-nmap <silent> <C-F5> :cs kill -1<CR> :!cscope.exe -Rb<CR> :cs add .<CR> :cs reset<CR>
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" If you are using windows:
+" At least you need linux's find, echo, grep, ctags, cscope
+" You can find them in either cygwin or msys
+"
+" Take a look at cygwin_commands_for_windows.7z
+"
+" rename find to gfind and put it in your PATH
+" rename echo to gecho and put it in your PATH
+" put grep in your PATH
+"
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" If you are using linux:
+" Change the following command's gfind to find
+" Change the following command's gecho to echo
+"
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Add more file types if you need.
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+nmap <silent> <C-F11> :cs kill -1<CR> :!find . -iname '*.c' -exec echo "\"{}\"" ';' -o -iname '*.cpp' -exec echo "\"{}\"" ';' -o -iname '*.cc' -exec echo "\"{}\"" ';' -o -iname '*.h' -exec echo "\"{}\"" ';' -o -iname '*.hpp' -exec echo "\"{}\"" ';' -o -iname '*.py' -exec echo "\"{}\"" ';' > cscope.files <CR>
+  \:!cscope -b -i cscope.files -f cscope.out<CR>
+  \:cs add .<CR>
+  \:cs reset<CR>
+
+" This is for quickly updating cscope file without using GNU find
+nmap <silent> <C-F5> :cs kill -1<CR>
+  \:!cscope -b -i cscope.files -f cscope.out<CR>
+  \:cs add .<CR>
+  \:cs reset<CR>
 
 " Refresh ctags with Ctrl+F12
-"map <C-F12> <esc>:!ctags -R --c++-kinds=+p --fields=+iaS --extra=+q .<cr>
 map <C-F12> <esc>:!ctags -R --c++-kinds=+p --fields=+ialS --extra=+q .<cr>
 
 " Delete spaces after each line
@@ -273,7 +299,10 @@ map <silent> <C-T> :TaskList <CR>
 let g:tlTokenList = ['TODO', 'DBS', 'DBSM', 'dbs', 'dbsm']
 
 " Auto completion via ctrl-j (instead of the nasty ctrl-x ctrl-o)
-inoremap <C-j> <C-x><C-o>
+" inoremap <C-j> <C-x><C-o>
+"
+" Auto completion via ctrl-j using eclim (instead of the nasty ctrl-x ctrl-u)
+inoremap <C-j> <C-x><C-u>
 
 " Bufexplorer
 map <silent> <C-Tab> \be

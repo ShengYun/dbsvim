@@ -11,3 +11,5 @@ Notes:
 2) Please change vimrc and dbs.vim's fileformat in different OSs
 set fileformat=UNIX|DOS|MAC
 :w
+
+Please take a look at vimrc's Line 261, you need to modify it a little bit due to which operating system you are using.
