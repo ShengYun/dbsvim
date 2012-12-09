@@ -1,4 +1,4 @@
-#!/usr/bin/sh
+#!/bin/sh
 
 rm tags
 rm cscope.files
