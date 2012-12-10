@@ -277,10 +277,16 @@ let g:Tlist_Use_Right_Window = 1
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Add more file types if you need.
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-nmap <silent> <C-F11> :cs kill -1<CR> :!find . -iname '*.c' -exec echo "\"{}\"" ';' -o -iname '*.cpp' -exec echo "\"{}\"" ';' -o -iname '*.cc' -exec echo "\"{}\"" ';' -o -iname '*.h' -exec echo "\"{}\"" ';' -o -iname '*.hpp' -exec echo "\"{}\"" ';' -o -iname '*.py' -exec echo "\"{}\"" ';' > cscope.files <CR>
-  \:!cscope -b -i cscope.files -f cscope.out<CR>
-  \:cs add .<CR>
-  \:cs reset<CR>
+nmap <silent> <C-F11> :cs kill -1<CR>
+         \ :!gfind . -iname '*.c' -exec gecho "\"{}\"" ';' 
+         \ -o -iname '*.cpp' -exec gecho "\"{}\"" ';' 
+         \ -o -iname '*.cc' -exec gecho "\"{}\"" ';'
+         \ -o -iname '*.h' -exec gecho "\"{}\"" ';'
+         \ -o -iname '*.hpp' -exec gecho "\"{}\"" ';'
+         \ -o -iname '*.py' -exec gecho "\"{}\"" ';' > cscope.files <CR>
+         \:!cscope -b -i cscope.files -f cscope.out<CR>
+         \:cs add .<CR>
+         \:cs reset<CR>
 
 " This is for quickly updating cscope file without using GNU find
 nmap <silent> <C-F5> :cs kill -1<CR>
