@@ -70,7 +70,7 @@ let ColourAssignment['Member']          = {"GUIFG": '#ff8000'}
 let ColourAssignment['Union']           = {"GUIFG": '#00ff00'}
 let ColourAssignment['GlobalVariable']  = {"GUIFG": '#ff8000'}
 let ColourAssignment['LocalVariable']   = {"GUIFG": '#aaa14c'}
-let ColourAssignment['GlobalConstant']  = {"GUIFG": '#bbbb00'}
+let ColourAssignment['GlobalConstant']  = {"GUIFG": '#ff00ff'}
 
 " Types/storage classes etc are shades of orangey-red
 let ColourAssignment['Type']            = {"GUIFG": '#00FF00'}
@@ -112,7 +112,7 @@ let ColourAssignment['SignColumn']      = {"GUIBG": '#222222'}
 
 " Text Titles
 let ColourAssignment['Title']           = {"GUIFG": 'Yellow'}
-let ColourAssignment['htmlH1']          = {"GUIFG": 'Blue'}
+let ColourAssignment['htmlH1']          = {"GUIFG": '#3333FF'}
 let ColourAssignment['htmlH2']          = {"GUIFG": '#8888FF'}
 let ColourAssignment['htmlH3']          = {"GUIFG": '#9999DD'}
 let ColourAssignment['htmlH4']          = {"GUIFG": '#5555AA'}
