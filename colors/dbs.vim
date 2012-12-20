@@ -1,6 +1,6 @@
 " vim: tw=0 ts=4 sw=4 noet ft=colours_dbs foldmethod=diff
 " Vim colour file
-" Maintainer:	A. S. Budden
+" Maintainer:	Sheng Yun, Based on A. S. Budden's bandit.vim
 
 hi clear
 if exists("syntax_on")
