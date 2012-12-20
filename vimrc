@@ -283,6 +283,9 @@ nmap <silent> <C-F11> :cs kill -1<CR>
          \ -o -iname '*.cc' -exec gecho "\"{}\"" ';'
          \ -o -iname '*.h' -exec gecho "\"{}\"" ';'
          \ -o -iname '*.hpp' -exec gecho "\"{}\"" ';'
+         \ -o -iname '*.java' -exec gecho "\"{}\"" ';'
+         \ -o -iname '*.php' -exec gecho "\"{}\"" ';'
+         \ -o -iname '*.pl' -exec gecho "\"{}\"" ';'
          \ -o -iname '*.py' -exec gecho "\"{}\"" ';' > cscope.files <CR>
          \:!cscope -b -i cscope.files -f cscope.out<CR>
          \:cs add .<CR>
