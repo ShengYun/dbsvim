@@ -318,7 +318,7 @@ map <silent> <C-Tab> \be
 
 " FuzzyFinder
 " map <C-@> <esc>:FufFile **\<cr>
-map <silent> <A-\> :FufFile **\<cr>
+map <silent> <C-[> :FufFile **\<cr>
 map <silent> <C-\> :FufTag<cr>
 " map <C-> <esc>:FufBuffer<cr>
 " map <C-> <esc>:FuzzyFinderAddBookmark<cr>
@@ -357,3 +357,5 @@ let OmniCpp_ShowAccess = 1
 let OmniCpp_MayCompleteDot = 1  
 let OmniCpp_MayCompleteArrow = 1  
 let OmniCpp_MayCompleteScope = 1 
+
+
