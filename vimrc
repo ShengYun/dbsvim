@@ -358,4 +358,10 @@ let OmniCpp_MayCompleteDot = 1
 let OmniCpp_MayCompleteArrow = 1  
 let OmniCpp_MayCompleteScope = 1 
 
+" guifont for linux
+" set guifont=Monospace\ 14
+
+" guifont for mac
+" set guifont=Monaco:h14
+
 
