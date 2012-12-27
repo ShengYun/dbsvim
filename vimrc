@@ -324,6 +324,37 @@ map <silent> <C-\> :FufTag<cr>
 " map <C-> <esc>:FuzzyFinderAddBookmark<cr>
 " map <C-> <esc>:FuzzyFinderBookmark<cr>
 
+" CtrlP config
+
+" Set this to 1 to set searching by filename (as opposed to full path) as the
+" default: >
+let g:ctrlp_by_filename = 1
+
+" Set this to 1 to set regexp search as the default: >
+let g:ctrlp_regexp = 1
+
+" 1 - the parent directory of the current file.
+" 2 - the nearest ancestor that contains one of these directories or files:
+"     .git/ .hg/ .svn/ .bzr/ _darcs/
+" 0 - don't manage working directory.
+let g:ctrlp_working_path_mode = 0
+
+" Set this to 1 to enable the lazy-update feature: only update the match window
+" after typing been stopped for a certain amount of time: >
+"
+" If is 1, update after 250ms. If bigger than 1, the number will be used as the
+" delay time in milliseconds.
+let g:ctrlp_lazy_update = 1
+
+" In addition to |'wildignore'|, use this for files and directories you want only
+" CtrlP to not show. Use regexp to specify the patterns: >
+let g:ctrlp_custom_ignore = {
+  \ 'dir':  '\.git$\|\.hg$\|\.svn$',
+  \ 'file': '\.exe$\|\.so$\|\.dll$\|\.elf$\|\.o$\
+             \|\.vsd$\|\.vsdx$\|\.doc$\|\.docx$\
+             \|\.xls$\|\.xlsx$',
+  \ 'link': '',
+  \ }
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Programming language support
