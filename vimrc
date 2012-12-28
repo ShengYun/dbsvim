@@ -395,4 +395,7 @@ let OmniCpp_MayCompleteScope = 1
 " guifont for mac
 " set guifont=Monaco:h14
 
+" guifont for windows
+" set guifont=Fixedsys:h14
+
 
