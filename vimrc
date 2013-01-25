@@ -311,7 +311,7 @@ let g:tlTokenList = ['TODO', 'DBS', 'DBSM', 'dbs', 'dbsm']
 " inoremap <C-j> <C-x><C-o>
 "
 " Auto completion via ctrl-j using eclim (instead of the nasty ctrl-x ctrl-u)
-inoremap <C-j> <C-x><C-u>
+" inoremap <C-j> <C-x><C-u>
 
 " Bufexplorer
 map <silent> <C-Tab> \be
@@ -346,6 +346,9 @@ let g:ctrlp_working_path_mode = 0
 " delay time in milliseconds.
 let g:ctrlp_lazy_update = 1
 
+" The maximum number of files to scan, set to 0 for no limit: >
+let g:ctrlp_max_files = 0
+
 " In addition to |'wildignore'|, use this for files and directories you want only
 " CtrlP to not show. Use regexp to specify the patterns: >
 let g:ctrlp_custom_ignore = {
@@ -369,16 +372,17 @@ filetype plugin indent on
 set completeopt=longest,menu
 set wildmenu
 
-autocmd FileType python set omnifunc=pythoncomplete#Complete
+" ccomplete will be override by omnicppcomplete later.
+set omnifunc=syntaxcomplete#Complete
 
 " Omnicpp's setup
-set tags+=tags;    
+" set tags+=tags;    
 " set tags+=C:/Program\ Files/boost\boost_1_47\boost\tags  
 " set tags+=C:\MinGW\lib\gcc\mingw32\4.5.2\include\tags; 
 
-au BufNewFile,BufRead,BufEnter *.cpp,*.hpp,*.c,*.h set omnifunc=omni#cpp#complete#Main
+au BufNewFile,BufRead,BufEnter *.cpp,*.hpp,*.cc,*.c,*.h set omnifunc=omni#cpp#complete#Main
 
-" Omni config
+" OmniCpp config
 let OmniCpp_GlobalScopeSearch = 1  " 0 or 1  
 let OmniCpp_NamespaceSearch = 1   " 0 ,  1 or 2  
 let OmniCpp_DisplayMode = 1  
