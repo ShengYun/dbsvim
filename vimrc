@@ -318,7 +318,7 @@ map <silent> <C-Tab> \be
 
 " FuzzyFinder
 " map <C-@> <esc>:FufFile **\<cr>
-map <silent> <A-\> :FufFile **\<cr>
+" map <silent> <A-\> :FufFile **\<cr>
 map <silent> <C-\> :FufTag<cr>
 " map <C-> <esc>:FufBuffer<cr>
 " map <C-> <esc>:FuzzyFinderAddBookmark<cr>
