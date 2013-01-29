@@ -349,6 +349,9 @@ let g:ctrlp_lazy_update = 1
 " The maximum number of files to scan, set to 0 for no limit: >
 let g:ctrlp_max_files = 0
 
+" Set the maximum height of the match window: >
+let g:ctrlp_max_height = 70
+
 " In addition to |'wildignore'|, use this for files and directories you want only
 " CtrlP to not show. Use regexp to specify the patterns: >
 let g:ctrlp_custom_ignore = {
