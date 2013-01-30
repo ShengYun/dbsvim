@@ -12,4 +12,4 @@ Notes:
 set fileformat=UNIX|DOS|MAC
 :w
 
-Please take a look at vimrc's Line 261, you need to modify it a little bit due to which operating system you are using.
+Please take a look at vimrc's Line 133, you need to modify it a little bit due to which operating system you are using.
