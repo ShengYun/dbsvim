@@ -99,11 +99,14 @@ nnoremap <space>f :cs find f <C-R>=expand("<cfile>")<CR><CR>
 nnoremap <space>i :cs find i <C-R>=expand("<cfile>")<CR><CR>
 nnoremap <space>d :cs find d <C-R>=expand("<cword>")<CR><CR>
 
-" Set Grep's short cut and the grep path
-" This is using the external grep.exe, but the Rgrep is not good
-" So I comment it out, and changed to use vimgrep
+" Grep config, you can setup grep's path in windows
+" or just put grep in your PATH. You can find grep
+" in cygwin_commands_for_windows.7z
+
 nnoremap <silent> <F3> :Grep -r<CR>
 nnoremap <silent> <C-F3> :GrepAdd -r<CR>
+
+let Grep_Default_Filelist = '. --include=*.{}'
 "let Grep_Path = 'C:\shengy\grep\grep.exe'
 "let Fgrep_Path = 'C:\shengy\grep\fgrep.exe'
 "let Egrep_Path = 'C:\shengy\grep\egrep.exe'
