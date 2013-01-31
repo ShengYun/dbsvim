@@ -102,17 +102,21 @@ nnoremap <space>d :cs find d <C-R>=expand("<cword>")<CR><CR>
 " Grep config, you can setup grep's path in windows
 " or just put grep in your PATH. You can find grep
 " in cygwin_commands_for_windows.7z
-
-nnoremap <silent> <F3> :Grep -r<CR>
-nnoremap <silent> <C-F3> :GrepAdd -r<CR>
+" I changed grep.vim's grep_expr_option in grep mode
+" from '--' to '' in order to input options in file list
+" grep.vim version 1.9's Line 489 and Line 742
+nnoremap <silent> <F3> :Grep<CR>
+nnoremap <silent> <C-F3> :GrepAdd<CR>
 
 let Grep_Default_Filelist = '. --include=*.{}'
+let Grep_Default_Options = '-r'
 "let Grep_Path = 'C:\shengy\grep\grep.exe'
 "let Fgrep_Path = 'C:\shengy\grep\fgrep.exe'
 "let Egrep_Path = 'C:\shengy\grep\egrep.exe'
 "let Agrep_Path = 'C:\shengy\grep\agrep.exe'
 "let Grep_Find_Path = 'C:\shengy\grep\find.exe'
 "let Grep_Xargs_Path = 'C:\shengy\grep\xargs.exe'
+
 
 " Setup vimgrep
 "noremap <silent> <C-F3> :call Search_Word()<CR>:copen<CR>
