@@ -486,7 +486,7 @@ function! s:RunGrepRecursive(cmd_name, grep_cmd, action, ...)
 
     if a:grep_cmd == 'grep'
         let grep_path = g:Grep_Path
-        let grep_expr_option = '--'
+        let grep_expr_option = ''
     elseif a:grep_cmd == 'fgrep'
         let grep_path = g:Fgrep_Path
         let grep_expr_option = '-e'
@@ -739,7 +739,7 @@ function! s:RunGrep(cmd_name, grep_cmd, action, ...)
 
     if a:grep_cmd == 'grep'
         let grep_path = g:Grep_Path
-        let grep_expr_option = '--'
+        let grep_expr_option = ''
     elseif a:grep_cmd == 'fgrep'
         let grep_path = g:Fgrep_Path
         let grep_expr_option = '-e'
