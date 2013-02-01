@@ -29,6 +29,7 @@ function MyDiff()
 endfunction
 
 " Below is customized settings
+let mapleader = ","
 
 " Allow colors in commandline mode
 if !has("gui_running")
@@ -90,20 +91,26 @@ let Tlist_Exit_OnlyWindow=1
 :set cscopequickfix=s-,c-,d-,i-,t-,e-
 
 " Set cscope's shortcut
-nnoremap <space>s :cs find s <C-R>=expand("<cword>")<CR><CR>
-nnoremap <space>g :cs find g <C-R>=expand("<cword>")<CR><CR>
-nnoremap <space>c :cs find c <C-R>=expand("<cword>")<CR><CR>
-nnoremap <space>t :cs find t <C-R>=expand("<cword>")<CR><CR>
-nnoremap <space>e :cs find e <C-R>=expand("<cword>")<CR><CR>
-nnoremap <space>f :cs find f <C-R>=expand("<cfile>")<CR><CR>
-nnoremap <space>i :cs find i <C-R>=expand("<cfile>")<CR><CR>
-nnoremap <space>d :cs find d <C-R>=expand("<cword>")<CR><CR>
+nnoremap <leader>s :cs find s <C-R>=expand("<cword>")<CR><CR>
+nnoremap <leader>g :cs find g <C-R>=expand("<cword>")<CR><CR>
+nnoremap <leader>c :cs find c <C-R>=expand("<cword>")<CR><CR>
+nnoremap <leader>t :cs find t <C-R>=expand("<cword>")<CR><CR>
+nnoremap <leader>e :cs find e <C-R>=expand("<cword>")<CR><CR>
+nnoremap <leader>f :cs find f <C-R>=expand("<cfile>")<CR><CR>
+nnoremap <leader>i :cs find i <C-R>=expand("<cfile>")<CR><CR>
+nnoremap <leader>d :cs find d <C-R>=expand("<cword>")<CR><CR>
 
-" Set Grep's short cut and the grep path
-" This is using the external grep.exe, but the Rgrep is not good
-" So I comment it out, and changed to use vimgrep
-nnoremap <silent> <F3> :Grep -r<CR>
-nnoremap <silent> <C-F3> :GrepAdd -r<CR>
+" Grep config, you can setup grep's path in windows
+" or just put grep in your PATH. You can find grep
+" in cygwin_commands_for_windows.7z
+" I changed grep.vim's grep_expr_option in grep mode
+" from '--' to '' in order to input options in file list
+" grep.vim version 1.9's Line 489 and Line 742
+nnoremap <silent> <F3> :Grep<CR>
+nnoremap <silent> <C-F3> :GrepAdd<CR>
+
+let Grep_Default_Filelist = '. --include=*.{}'
+let Grep_Default_Options = '-r'
 "let Grep_Path = 'C:\shengy\grep\grep.exe'
 "let Fgrep_Path = 'C:\shengy\grep\fgrep.exe'
 "let Egrep_Path = 'C:\shengy\grep\egrep.exe'
@@ -129,6 +136,9 @@ nnoremap <F6> :cp<CR>
 nnoremap <F4> :Tlist<CR>
 let g:Tlist_WinWidth = 50
 let g:Tlist_Use_Right_Window = 1
+
+" Use leader F4 to call Nerdtree
+nnoremap <leader><F4> :NERDTreeToggle<CR>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " If you are using windows:
@@ -176,7 +186,10 @@ nnoremap <C-F12> <esc>:!ctags -R --c++-kinds=+p --fields=+ialS --extra=+q .<cr>
 nnoremap <silent> <F2> :%s/\s\+$//g <CR>
 
 " Tasklist configure
-nnoremap <silent> <C-T> :TaskList <CR>
+" This can't be a nore map because it's written in
+" tasklist.vim
+nmap <silent> <C-T> <Plug>TaskList
+
 let g:tlTokenList = ['TODO', 'DBS', 'DBSM', 'dbs', 'dbsm']
 
 " Bufexplorer
