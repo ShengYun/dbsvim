@@ -251,6 +251,21 @@ set wildmenu
 " ccomplete will be override by omnicppcomplete later.
 set omnifunc=syntaxcomplete#Complete
 
+" omnicomplete's shortcut
+inoremap <leader>] <C-X><C-]>
+inoremap <leader>d <C-X><C-d>
+inoremap <leader>e <C-X><C-e>
+inoremap <leader>f <C-X><C-f>
+inoremap <leader>i <C-X><C-i>
+inoremap <leader>k <C-X><C-k>
+inoremap <leader>l <C-X><C-l>
+inoremap <leader>n <C-X><C-n>
+inoremap <leader>o <C-X><C-o>
+inoremap <leader>s <C-X><C-s>
+inoremap <leader>u <C-X><C-u>
+inoremap <leader>v <C-X><C-v>
+inoremap <leader>y <C-X><C-y>
+
 " Omnicpp's setup
 " set tags+=tags;    
 " set tags+=C:/Program\ Files/boost\boost_1_47\boost\tags  
