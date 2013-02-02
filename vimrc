@@ -270,11 +270,11 @@ let OmniCpp_MayCompleteArrow = 1
 let OmniCpp_MayCompleteScope = 1 
 
 " guifont for linux
-" set guifont=Monospace\ 14
+" set guifont=Monospace\ 12
 
 " guifont for mac
-" set guifont=Monaco:h14
+" set guifont=Monaco:h12
 
 " guifont for windows
-" set guifont=Fixedsys:h14
+" set guifont=Fixedsys:h12
 
