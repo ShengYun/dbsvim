@@ -35,12 +35,11 @@ let mapleader = ","
 if !has("gui_running")
     set t_Co=16
     " Color setting for terminal
-    :colorscheme default
+    colorscheme default
 else
     set t_Co=16
     " Color setting for GUI
-    :colorscheme torte
-    :colorscheme dbs
+    colorscheme dbs
 endif
 
 " Setup fencview
