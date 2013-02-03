@@ -109,7 +109,7 @@ let ColourAssignment['FoldColumn']      = {"GUIFG": 'DarkBlue',    "GUIBG":   'G
 
 " Popup Menu
 let ColourAssignment['Pmenu']           = {"GUIFG": 'Red',     "GUIBG": 'Black',     "CTERMFG": "Red",   "CTERMBG": "Black"}
-let ColourAssignment['PmenuSel']        = {"GUIFG": 'Green',   "GUIBG": 'Black',     "CTERMFG": "Red",   "CTERMBG": "Black"}
+let ColourAssignment['PmenuSel']        = {"GUIFG": 'Green',   "GUIBG": 'Black',     "CTERMFG": "Green", "CTERMBG": "Black"}
 
 " Line Numbering
 let ColourAssignment['LineNr']          = {"GUIFG": 'Yellow'}
