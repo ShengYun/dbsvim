@@ -266,6 +266,13 @@ inoremap <leader>u <C-X><C-u>
 inoremap <leader>v <C-X><C-v>
 inoremap <leader>y <C-X><C-y>
 
+inoremap <expr> <C-d> pumvisible() ? "\<PageDown>\<C-p>\<C-n>" : "\<C-d>"
+inoremap <expr> <C-u> pumvisible() ? "\<PageUp>\<C-p>\<C-n>" : "\<C-u>"
+inoremap <expr> <C-f> pumvisible() ? "\<PageDown>\<C-p>\<C-n>" : "\<C-f>"
+inoremap <expr> <C-b> pumvisible() ? "\<PageUp>\<C-p>\<C-n>" : "\<C-b>"
+inoremap <expr> <C-j> pumvisible() ? "\<C-n>" : "\<C-j>"
+inoremap <expr> <C-k> pumvisible() ? "\<C-p>" : "\<C-k>"
+
 " Omnicpp's setup
 " set tags+=tags;    
 " set tags+=C:/Program\ Files/boost\boost_1_47\boost\tags  
