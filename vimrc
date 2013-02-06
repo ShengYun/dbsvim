@@ -42,6 +42,12 @@ else
     colorscheme dbs
 endif
 
+" Remove menu bar and tool bar
+set guioptions-=T
+set guioptions-=m
+set guioptions-=r
+set guioptions-=b
+
 " Setup fencview
 let g:fencview_autodetect = 0
 set statusline=[%n]%<%f%y%h%m[%{&fenc!=''?&fenc:&enc}:%{&ff}]%r%=[%b\ 0x%B]\ %l\ of\ %L,%c%V\ Page\ %N\ %P 
