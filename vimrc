@@ -47,6 +47,7 @@ set guioptions-=T
 set guioptions-=m
 set guioptions-=r
 set guioptions-=b
+set guioptions-=L
 
 " Setup fencview
 let g:fencview_autodetect = 0
