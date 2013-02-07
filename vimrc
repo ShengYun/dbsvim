@@ -166,15 +166,15 @@ nnoremap <leader><F4> :NERDTreeToggle<CR>
 " Add more file types if you need.
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 nnoremap <silent> <C-F11> :cs kill -1<CR>
-         \ :!gfind . -iname '*.c' -exec gecho "\"{}\"" ';' 
-         \ -o -iname '*.cpp' -exec gecho "\"{}\"" ';' 
-         \ -o -iname '*.cc' -exec gecho "\"{}\"" ';'
-         \ -o -iname '*.h' -exec gecho "\"{}\"" ';'
-         \ -o -iname '*.hpp' -exec gecho "\"{}\"" ';'
-         \ -o -iname '*.java' -exec gecho "\"{}\"" ';'
-         \ -o -iname '*.php' -exec gecho "\"{}\"" ';'
-         \ -o -iname '*.pl' -exec gecho "\"{}\"" ';'
-         \ -o -iname '*.py' -exec gecho "\"{}\"" ';' > cscope.files <CR>
+         \ :!find . -iname '*.c' -exec echo "\"{}\"" ';' 
+         \ -o -iname '*.cpp' -exec echo "\"{}\"" ';' 
+         \ -o -iname '*.cc' -exec echo "\"{}\"" ';'
+         \ -o -iname '*.h' -exec echo "\"{}\"" ';'
+         \ -o -iname '*.hpp' -exec echo "\"{}\"" ';'
+         \ -o -iname '*.java' -exec echo "\"{}\"" ';'
+         \ -o -iname '*.php' -exec echo "\"{}\"" ';'
+         \ -o -iname '*.pl' -exec echo "\"{}\"" ';'
+         \ -o -iname '*.py' -exec echo "\"{}\"" ';' > cscope.files <CR>
          \:!cscope -b -i cscope.files -f cscope.out<CR>
          \:cs add .<CR>
          \:cs reset<CR>
