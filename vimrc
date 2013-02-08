@@ -246,7 +246,7 @@ let g:ctrlp_custom_ignore = {
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 " Pydiction
-" let g:pydiction_location = 'C:\Program Files\Vim\vim73\ftplugin\complete-dict'
+let g:pydiction_location = '$HOME/.vim/bundle/pydiction-1.2/ftplugin/complete-dict'
 
 " Omnifun's auto complete
 set nocp
