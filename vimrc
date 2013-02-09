@@ -5,28 +5,28 @@ call pathogen#infect()
 
 set diffexpr=MyDiff()
 function MyDiff()
-  let opt = '-a --binary '
-  if &diffopt =~ 'icase' | let opt = opt . '-i ' | endif
-  if &diffopt =~ 'iwhite' | let opt = opt . '-b ' | endif
-  let arg1 = v:fname_in
-  if arg1 =~ ' ' | let arg1 = '"' . arg1 . '"' | endif
-  let arg2 = v:fname_new
-  if arg2 =~ ' ' | let arg2 = '"' . arg2 . '"' | endif
-  let arg3 = v:fname_out
-  if arg3 =~ ' ' | let arg3 = '"' . arg3 . '"' | endif
-  let eq = ''
-  if $VIMRUNTIME =~ ' '
-    if &sh =~ '\<cmd'
-      let cmd = '""' . $VIMRUNTIME . '\diff"'
-      let eq = '"'
+    let opt = '-a --binary '
+    if &diffopt =~ 'icase' | let opt = opt . '-i ' | endif
+    if &diffopt =~ 'iwhite' | let opt = opt . '-b ' | endif
+    let arg1 = v:fname_in
+    if arg1 =~ ' ' | let arg1 = '"' . arg1 . '"' | endif
+    let arg2 = v:fname_new
+    if arg2 =~ ' ' | let arg2 = '"' . arg2 . '"' | endif
+    let arg3 = v:fname_out
+    if arg3 =~ ' ' | let arg3 = '"' . arg3 . '"' | endif
+    let eq = ''
+    if $VIMRUNTIME =~ ' '
+        if &sh =~ '\<cmd'
+        let cmd = '""' . $VIMRUNTIME . '\diff"'
+        let eq = '"'
+        else
+        let cmd = substitute($VIMRUNTIME, ' ', '" ', '') . '\diff"'
+        endif
     else
-      let cmd = substitute($VIMRUNTIME, ' ', '" ', '') . '\diff"'
+        let cmd = $VIMRUNTIME . '\diff'
     endif
-  else
-    let cmd = $VIMRUNTIME . '\diff'
-  endif
-  silent execute '!' . cmd . ' ' . opt . arg1 . ' ' . arg2 . ' > ' . arg3 . eq
-endfunction
+    silent execute '!' . cmd . ' ' . opt . arg1 . ' ' . arg2 . ' > ' . arg3 . eq
+    endfunction
 
 " Below is customized settings
 let mapleader = ","
@@ -161,40 +161,40 @@ nnoremap <leader><F4> :NERDTreeToggle<CR>
 " Add more file types if you need.
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 if has("win16") || has("win95") || has("win32") || has("win64")
-   nnoremap <silent> <C-F11> :cs kill -1<CR>
-            \ :!gfind . -iname '*.c' -exec gecho "\"{}\"" ';' 
-            \ -o -iname '*.cpp' -exec gecho "\"{}\"" ';' 
-            \ -o -iname '*.cc' -exec gecho "\"{}\"" ';'
-            \ -o -iname '*.h' -exec gecho "\"{}\"" ';'
-            \ -o -iname '*.hpp' -exec gecho "\"{}\"" ';'
-            \ -o -iname '*.java' -exec gecho "\"{}\"" ';'
-            \ -o -iname '*.php' -exec gecho "\"{}\"" ';'
-            \ -o -iname '*.pl' -exec gecho "\"{}\"" ';'
-            \ -o -iname '*.py' -exec gecho "\"{}\"" ';' > cscope.files <CR>
-            \:!cscope -b -i cscope.files -f cscope.out<CR>
-            \:cs add .<CR>
-            \:cs reset<CR>
+    nnoremap <silent> <C-F11> :cs kill -1<CR>
+                \ :!gfind . -iname '*.c' -exec gecho "\"{}\"" ';' 
+                \ -o -iname '*.cpp' -exec gecho "\"{}\"" ';' 
+                \ -o -iname '*.cc' -exec gecho "\"{}\"" ';'
+                \ -o -iname '*.h' -exec gecho "\"{}\"" ';'
+                \ -o -iname '*.hpp' -exec gecho "\"{}\"" ';'
+                \ -o -iname '*.java' -exec gecho "\"{}\"" ';'
+                \ -o -iname '*.php' -exec gecho "\"{}\"" ';'
+                \ -o -iname '*.pl' -exec gecho "\"{}\"" ';'
+                \ -o -iname '*.py' -exec gecho "\"{}\"" ';' > cscope.files <CR>
+                \:!cscope -b -i cscope.files -f cscope.out<CR>
+                \:cs add .<CR>
+                \:cs reset<CR>
 else
-   nnoremap <silent> <C-F11> :cs kill -1<CR>
-            \ :!find . -iname '*.c' -exec echo "\"{}\"" ';' 
-            \ -o -iname '*.cpp' -exec echo "\"{}\"" ';' 
-            \ -o -iname '*.cc' -exec echo "\"{}\"" ';'
-            \ -o -iname '*.h' -exec echo "\"{}\"" ';'
-            \ -o -iname '*.hpp' -exec echo "\"{}\"" ';'
-            \ -o -iname '*.java' -exec echo "\"{}\"" ';'
-            \ -o -iname '*.php' -exec echo "\"{}\"" ';'
-            \ -o -iname '*.pl' -exec echo "\"{}\"" ';'
-            \ -o -iname '*.py' -exec echo "\"{}\"" ';' > cscope.files <CR>
-            \:!cscope -b -i cscope.files -f cscope.out<CR>
-            \:cs add .<CR>
-            \:cs reset<CR>
+    nnoremap <silent> <C-F11> :cs kill -1<CR>
+                \ :!find . -iname '*.c' -exec echo "\"{}\"" ';' 
+                \ -o -iname '*.cpp' -exec echo "\"{}\"" ';' 
+                \ -o -iname '*.cc' -exec echo "\"{}\"" ';'
+                \ -o -iname '*.h' -exec echo "\"{}\"" ';'
+                \ -o -iname '*.hpp' -exec echo "\"{}\"" ';'
+                \ -o -iname '*.java' -exec echo "\"{}\"" ';'
+                \ -o -iname '*.php' -exec echo "\"{}\"" ';'
+                \ -o -iname '*.pl' -exec echo "\"{}\"" ';'
+                \ -o -iname '*.py' -exec echo "\"{}\"" ';' > cscope.files <CR>
+                \:!cscope -b -i cscope.files -f cscope.out<CR>
+                \:cs add .<CR>
+                \:cs reset<CR>
 endif
 
 " This is for quickly updating cscope file without using GNU find
 nnoremap <silent> <C-F5> :cs kill -1<CR>
-  \:!cscope -b -i cscope.files -f cscope.out<CR>
-  \:cs add .<CR>
-  \:cs reset<CR>
+    \:!cscope -b -i cscope.files -f cscope.out<CR>
+    \:cs add .<CR>
+    \:cs reset<CR>
 
 " Refresh ctags with Ctrl+F12
 nnoremap <C-F12> <esc>:!ctags -R --c++-kinds=+p --fields=+ialS --extra=+q .<cr>
@@ -246,19 +246,23 @@ let g:ctrlp_max_height = 70
 " In addition to |'wildignore'|, use this for files and directories you want only
 " CtrlP to not show. Use regexp to specify the patterns: >
 let g:ctrlp_custom_ignore = {
-  \ 'dir':  '\.git$\|\.hg$\|\.svn$',
-  \ 'file': '\.exe$\|\.so$\|\.dll$\|\.elf$\|\.o$\
-             \|\.vsd$\|\.vsdx$\|\.doc$\|\.docx$\
-             \|\.xls$\|\.xlsx$',
-  \ 'link': '',
-  \ }
+    \ 'dir':  '\.git$\|\.hg$\|\.svn$',
+    \ 'file': '\.exe$\|\.so$\|\.dll$\|\.elf$\|\.o$\
+                \|\.vsd$\|\.vsdx$\|\.doc$\|\.docx$\
+                \|\.xls$\|\.xlsx$',
+    \ 'link': '',
+    \ }
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Programming language support
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 " Pydiction
-" let g:pydiction_location = 'C:\Program Files\Vim\vim73\ftplugin\complete-dict'
+if has("win16") || has("win95") || has("win32") || has("win64")
+    let g:pydiction_location = '$HOME\vimfiles\bundle\pydiction\ftplugin\complete-dict'
+else
+    let g:pydiction_location = '$HOME/.vim/bundle/pydiction/ftplugin/complete-dict'
+endif
 
 " Omnifun's auto complete
 set nocp
