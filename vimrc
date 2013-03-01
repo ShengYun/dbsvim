@@ -313,6 +313,10 @@ let OmniCpp_MayCompleteDot = 1
 let OmniCpp_MayCompleteArrow = 1  
 let OmniCpp_MayCompleteScope = 1 
 
+" neocomplcache setup
+let g:neocomplcache_enable_at_startup = 1
+let g:neocomplcache_max_menu_width = 70
+
 " guifont for linux
 " set guifont=Monospace\ 12
 
