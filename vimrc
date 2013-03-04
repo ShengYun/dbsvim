@@ -259,7 +259,7 @@ let g:ctrlp_custom_ignore = {
 
 " Pydiction
 if has("win16") || has("win95") || has("win32") || has("win64")
-    let g:pydiction_location = '$HOME\vimfiles\bundle\pydiction\ftplugin\complete-dict'
+    let g:pydiction_location = '$VIM\vimfiles\bundle\pydiction\ftplugin\complete-dict'
 else
     let g:pydiction_location = '$HOME/.vim/bundle/pydiction/ftplugin/complete-dict'
 endif
