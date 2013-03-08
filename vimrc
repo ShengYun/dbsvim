@@ -51,7 +51,7 @@ set guioptions-=L
 
 " Setup fencview
 let g:fencview_autodetect = 0
-set statusline=[%n]%<%f%y%h%m[%{&fenc!=''?&fenc:&enc}:%{&ff}]%r%=[%b\ 0x%B]\ %l\ of\ %L,%c%V\ Page\ %N\ %P 
+set statusline=[%n]%<%f%y%h%m[%{&fenc!=''?&fenc:&enc}:%{&ff}]%r%=[%b\ 0x%B]\ %l\ of\ %L,%c%V\ Page\ %N\ %P
 
 " Change dir to the first opening file
 " and don't auto change dir ever.
@@ -112,8 +112,8 @@ nnoremap <leader>d :cs find d <C-R>=expand("<cword>")<CR><CR>
 " I changed grep.vim's grep_expr_option in grep mode
 " from '--' to '' in order to input options in file list
 " grep.vim version 1.9's Line 489 and Line 742
-nnoremap <silent> <F3> :Grep<CR>
-nnoremap <silent> <C-F3> :GrepAdd<CR>
+nnoremap <F3> :Grep<CR>
+nnoremap <leader><F3> :GrepAdd<CR>
 
 let Grep_Default_Filelist = '. --include=*.{}'
 let Grep_Default_Options = '-r'
@@ -132,7 +132,7 @@ let Grep_Default_Options = '-r'
 "endfunction
 
 " Set a.vim's shortcut
-nnoremap <silent> <F12> :A<CR>
+nnoremap <F12> :A<CR>
 
 " Set QuickFix's short cut
 nnoremap <F7> :cn<CR>
@@ -163,9 +163,9 @@ nnoremap <leader><F4> :NERDTreeToggle<CR>
 " Add more file types if you need.
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 if has("win16") || has("win95") || has("win32") || has("win64")
-    nnoremap <silent> <C-F11> :cs kill -1<CR>
-                \ :AsyncCommand gfind . -iname '*.c' -exec gecho "\"{}\"" ';' 
-                \ -o -iname '*.cpp' -exec gecho "\"{}\"" ';' 
+    nnoremap <leader><F11> :cs kill -1<CR>
+                \ :AsyncCommand gfind . -iname '*.c' -exec gecho "\"{}\"" ';'
+                \ -o -iname '*.cpp' -exec gecho "\"{}\"" ';'
                 \ -o -iname '*.cc' -exec gecho "\"{}\"" ';'
                 \ -o -iname '*.h' -exec gecho "\"{}\"" ';'
                 \ -o -iname '*.hpp' -exec gecho "\"{}\"" ';'
@@ -174,9 +174,9 @@ if has("win16") || has("win95") || has("win32") || has("win64")
                 \ -o -iname '*.pl' -exec gecho "\"{}\"" ';'
                 \ -o -iname '*.py' -exec gecho "\"{}\"" ';' > cscope.files <CR>
 else
-    nnoremap <silent> <C-F11> :cs kill -1<CR>
-                \ :AsyncCommand find . -iname '*.c' -exec echo "\"{}\"" ';' 
-                \ -o -iname '*.cpp' -exec echo "\"{}\"" ';' 
+    nnoremap <leader><F11> :cs kill -1<CR>
+                \ :AsyncCommand find . -iname '*.c' -exec echo "\"{}\"" ';'
+                \ -o -iname '*.cpp' -exec echo "\"{}\"" ';'
                 \ -o -iname '*.cc' -exec echo "\"{}\"" ';'
                 \ -o -iname '*.h' -exec echo "\"{}\"" ';'
                 \ -o -iname '*.hpp' -exec echo "\"{}\"" ';'
@@ -187,29 +187,29 @@ else
 endif
 
 " This is for quickly updating cscope file without using GNU find
-nnoremap <silent> <C-F5> :cs kill -1<CR>
+nnoremap <leader><F5> :cs kill -1<CR>
     \:!cscope -b -i cscope.files -f cscope.out<CR>
     \:cs add .<CR>
     \:cs reset<CR>
 
-" Refresh ctags with Ctrl+F12
-nnoremap <C-F12> <esc>:AsyncCommand ctags -R --c++-kinds=+p --fields=+ialS --extra=+q .<cr>
+" Refresh ctags with leader F12
+nnoremap <leader><F12> :AsyncCommand ctags -R --c++-kinds=+p --fields=+ialS --extra=+q .<cr>
 
 " Delete spaces after each line
-nnoremap <silent> <F2> :%s/\s\+$//g <CR>
+nnoremap <F2> :%s/\s\+$//g <CR>
 
 " Tasklist configure
 " This can't be a nore map because it's written in
 " tasklist.vim
-nmap <silent> <C-T> <Plug>TaskList
+nmap <C-T> <Plug>TaskList
 
 let g:tlTokenList = ['TODO', 'DBS', 'DBSM', 'dbs', 'dbsm']
 
 " Bufexplorer
-noremap <silent> <C-Tab> :BufExplorer<CR>
+noremap <C-Tab> :BufExplorer<CR>
 
 " FuzzyFinder
-noremap <silent> <C-\> :FufTag<CR>
+noremap <C-\> :FufTag<CR>
 
 " CtrlP config
 
@@ -292,22 +292,22 @@ inoremap <expr> <C-j> pumvisible() ? "\<C-n>" : "\<C-j>"
 inoremap <expr> <C-k> pumvisible() ? "\<C-p>" : "\<C-k>"
 
 " Omnicpp's setup
-" set tags+=tags;    
-" set tags+=C:/Program\ Files/boost\boost_1_47\boost\tags  
-" set tags+=C:\MinGW\lib\gcc\mingw32\4.5.2\include\tags; 
+" set tags+=tags;
+" set tags+=C:/Program\ Files/boost\boost_1_47\boost\tags
+" set tags+=C:\MinGW\lib\gcc\mingw32\4.5.2\include\tags;
 
 au BufNewFile,BufRead,BufEnter *.cpp,*.hpp,*.cc,*.c,*.h set omnifunc=omni#cpp#complete#Main
 
 " OmniCpp config
-let OmniCpp_GlobalScopeSearch = 1  " 0 or 1  
-let OmniCpp_NamespaceSearch = 1   " 0 ,  1 or 2  
-let OmniCpp_DisplayMode = 1  
-let OmniCpp_ShowScopeInAbbr = 0  
-let OmniCpp_ShowPrototypeInAbbr = 1  
-let OmniCpp_ShowAccess = 1  
-let OmniCpp_MayCompleteDot = 1  
-let OmniCpp_MayCompleteArrow = 1  
-let OmniCpp_MayCompleteScope = 1 
+let OmniCpp_GlobalScopeSearch = 1  " 0 or 1
+let OmniCpp_NamespaceSearch = 1   " 0 ,  1 or 2
+let OmniCpp_DisplayMode = 1
+let OmniCpp_ShowScopeInAbbr = 0
+let OmniCpp_ShowPrototypeInAbbr = 1
+let OmniCpp_ShowAccess = 1
+let OmniCpp_MayCompleteDot = 1
+let OmniCpp_MayCompleteArrow = 1
+let OmniCpp_MayCompleteScope = 1
 
 " neocomplcache setup
 let g:neocomplcache_enable_at_startup = 1
