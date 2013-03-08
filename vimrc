@@ -137,6 +137,8 @@ nnoremap <silent> <F12> :A<CR>
 " Set QuickFix's short cut
 nnoremap <F7> :cn<CR>
 nnoremap <F6> :cp<CR>
+nnoremap <leader><F7> :cnewer<CR>
+nnoremap <leader><F6> :colder<CR>
 
 " Use F4 to call TagList Only
 nnoremap <F4> :Tlist<CR>
@@ -162,7 +164,7 @@ nnoremap <leader><F4> :NERDTreeToggle<CR>
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 if has("win16") || has("win95") || has("win32") || has("win64")
     nnoremap <silent> <C-F11> :cs kill -1<CR>
-                \ :!gfind . -iname '*.c' -exec gecho "\"{}\"" ';' 
+                \ :AsyncCommand gfind . -iname '*.c' -exec gecho "\"{}\"" ';' 
                 \ -o -iname '*.cpp' -exec gecho "\"{}\"" ';' 
                 \ -o -iname '*.cc' -exec gecho "\"{}\"" ';'
                 \ -o -iname '*.h' -exec gecho "\"{}\"" ';'
@@ -171,12 +173,9 @@ if has("win16") || has("win95") || has("win32") || has("win64")
                 \ -o -iname '*.php' -exec gecho "\"{}\"" ';'
                 \ -o -iname '*.pl' -exec gecho "\"{}\"" ';'
                 \ -o -iname '*.py' -exec gecho "\"{}\"" ';' > cscope.files <CR>
-                \:!cscope -b -i cscope.files -f cscope.out<CR>
-                \:cs add .<CR>
-                \:cs reset<CR>
 else
     nnoremap <silent> <C-F11> :cs kill -1<CR>
-                \ :!find . -iname '*.c' -exec echo "\"{}\"" ';' 
+                \ :AsyncCommand find . -iname '*.c' -exec echo "\"{}\"" ';' 
                 \ -o -iname '*.cpp' -exec echo "\"{}\"" ';' 
                 \ -o -iname '*.cc' -exec echo "\"{}\"" ';'
                 \ -o -iname '*.h' -exec echo "\"{}\"" ';'
@@ -185,9 +184,6 @@ else
                 \ -o -iname '*.php' -exec echo "\"{}\"" ';'
                 \ -o -iname '*.pl' -exec echo "\"{}\"" ';'
                 \ -o -iname '*.py' -exec echo "\"{}\"" ';' > cscope.files <CR>
-                \:!cscope -b -i cscope.files -f cscope.out<CR>
-                \:cs add .<CR>
-                \:cs reset<CR>
 endif
 
 " This is for quickly updating cscope file without using GNU find
@@ -197,7 +193,7 @@ nnoremap <silent> <C-F5> :cs kill -1<CR>
     \:cs reset<CR>
 
 " Refresh ctags with Ctrl+F12
-nnoremap <C-F12> <esc>:!ctags -R --c++-kinds=+p --fields=+ialS --extra=+q .<cr>
+nnoremap <C-F12> <esc>:AsyncCommand ctags -R --c++-kinds=+p --fields=+ialS --extra=+q .<cr>
 
 " Delete spaces after each line
 nnoremap <silent> <F2> :%s/\s\+$//g <CR>
