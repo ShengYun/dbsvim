@@ -1,0 +1,24 @@
+[submodule "plugin-repeat"]
+	path = bundle/repeat
+	url = git://github.com/tpope/vim-repeat.git
+[submodule "plugin-pydiction"]
+	path = bundle/pydiction
+	url = git://github.com/rkulla/pydiction.git
+[submodule "plugin-ctrlp"]
+	path = bundle/ctrlp
+	url = git://github.com/kien/ctrlp.vim.git
+[submodule "plugin-nerdtree"]
+	path = bundle/nerdtree
+	url = git://github.com/scrooloose/nerdtree.git
+[submodule "plugin-AsyncCommand"]
+	path = bundle/AsyncCommand
+	url = git://github.com/pydave/AsyncCommand.git
+[submodule "plugin-surround"]
+	path = bundle/surround
+	url = git://github.com/tpope/vim-surround.git
+[submodule "plugin-neocomplcache"]
+	path = bundle/neocomplcache
+	url = git://github.com/Shougo/neocomplcache.git
+[submodule "plugin-echofunc"]
+	path = bundle/echofunc
+	url = git://github.com/mbbill/echofunc.git
