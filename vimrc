@@ -163,7 +163,7 @@ nnoremap <leader><F4> :NERDTreeToggle<CR>
 " Add more file types if you need.
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 if has("win16") || has("win95") || has("win32") || has("win64")
-    nnoremap <leader><F11> :cs kill -1<CR>
+    nnoremap <leader><F11>
                 \ :AsyncCommand gfind . -iname '*.c' -exec gecho "\"{}\"" ';'
                 \ -o -iname '*.cpp' -exec gecho "\"{}\"" ';'
                 \ -o -iname '*.cc' -exec gecho "\"{}\"" ';'
@@ -174,7 +174,7 @@ if has("win16") || has("win95") || has("win32") || has("win64")
                 \ -o -iname '*.pl' -exec gecho "\"{}\"" ';'
                 \ -o -iname '*.py' -exec gecho "\"{}\"" ';' > cscope.files <CR>
 else
-    nnoremap <leader><F11> :cs kill -1<CR>
+    nnoremap <leader><F11>
                 \ :AsyncCommand find . -iname '*.c' -exec echo "\"{}\"" ';'
                 \ -o -iname '*.cpp' -exec echo "\"{}\"" ';'
                 \ -o -iname '*.cc' -exec echo "\"{}\"" ';'
