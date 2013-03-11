@@ -1,2 +1,6 @@
 [paths]
 default = https://bitbucket.org/ns9tks/vim-fuzzyfinder
+
+
+[http_proxy]
+host = http://127.0.0.1:5865
