@@ -249,10 +249,6 @@ let g:ctrlp_custom_ignore = {
     \ 'link': '',
     \ }
 
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Programming language support
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
 " Pydiction
 if has("win16") || has("win95") || has("win32") || has("win64")
     let g:pydiction_location = '$VIM\vimfiles\bundle\pydiction\ftplugin\complete-dict'
@@ -312,6 +308,9 @@ let OmniCpp_MayCompleteScope = 1
 " neocomplcache setup
 let g:neocomplcache_enable_at_startup = 1
 let g:neocomplcache_max_menu_width = 70
+
+" AsyncCommand setup
+let &grepprg = 'grep --line-number --with-filename'
 
 " guifont for linux
 " set guifont=Monospace\ 12
