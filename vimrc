@@ -208,9 +208,6 @@ let g:tlTokenList = ['TODO', 'DBS', 'DBSM', 'dbs', 'dbsm']
 " Bufexplorer
 noremap <C-Tab> :BufExplorer<CR>
 
-" FuzzyFinder
-noremap <C-\> :FufTag<CR>
-
 " CtrlP config
 
 " Set this to 1 to set searching by filename (as opposed to full path) as the
@@ -308,6 +305,7 @@ let OmniCpp_MayCompleteScope = 1
 " neocomplcache setup
 let g:neocomplcache_enable_at_startup = 1
 let g:neocomplcache_max_menu_width = 70
+nnoremap <C-\> :NeoComplCacheToggle<CR>
 
 " AsyncCommand setup
 let &grepprg = 'grep --line-number --with-filename'
