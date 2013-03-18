@@ -1,6 +1,0 @@
-[paths]
-default = https://bitbucket.org/abudden/taghighlight
-
-
-[http_proxy]
-host = http://127.0.0.1:5865
