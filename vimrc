@@ -246,6 +246,11 @@ let g:ctrlp_custom_ignore = {
     \ 'link': '',
     \ }
 
+" Set this to 0 to enable cross-session caching by not deleting the cache files
+" upon exiting Vim: >
+let g:ctrlp_clear_cache_on_exit = 0
+
+
 " Pydiction
 if has("win16") || has("win95") || has("win32") || has("win64")
     let g:pydiction_location = '$VIM\vimfiles\bundle\pydiction\ftplugin\complete-dict'
