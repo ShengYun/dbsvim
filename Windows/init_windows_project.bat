@@ -13,6 +13,7 @@ gfind . -iname '*.c' -exec gecho "\"{}\"" ';' ^
 -o -iname '*.h' -exec gecho "\"{}\"" ';' ^
 -o -iname '*.hpp' -exec gecho "\"{}\"" ';' ^
 -o -iname '*.java' -exec gecho "\"{}\"" ';' ^
+-o -iname '*.cs' -exec gecho "\"{}\"" ';' ^
 -o -iname '*.php' -exec gecho "\"{}\"" ';' ^
 -o -iname '*.pl' -exec gecho "\"{}\"" ';' ^
 -o -iname '*.py' -exec gecho "\"{}\"" ';' > cscope.files
