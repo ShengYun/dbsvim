@@ -3,30 +3,32 @@ set nocompatible
 " Init pathogen.vim
 call pathogen#infect()
 
-set diffexpr=MyDiff()
-function MyDiff()
-    let opt = '-a --binary '
-    if &diffopt =~ 'icase' | let opt = opt . '-i ' | endif
-    if &diffopt =~ 'iwhite' | let opt = opt . '-b ' | endif
-    let arg1 = v:fname_in
-    if arg1 =~ ' ' | let arg1 = '"' . arg1 . '"' | endif
-    let arg2 = v:fname_new
-    if arg2 =~ ' ' | let arg2 = '"' . arg2 . '"' | endif
-    let arg3 = v:fname_out
-    if arg3 =~ ' ' | let arg3 = '"' . arg3 . '"' | endif
-    let eq = ''
-    if $VIMRUNTIME =~ ' '
-        if &sh =~ '\<cmd'
-            let cmd = '""' . $VIMRUNTIME . '\diff"'
-            let eq = '"'
+if has("win16") || has("win95") || has("win32") || has("win64")
+    set diffexpr=MyDiff()
+    function MyDiff()
+        let opt = '-a --binary '
+        if &diffopt =~ 'icase' | let opt = opt . '-i ' | endif
+        if &diffopt =~ 'iwhite' | let opt = opt . '-b ' | endif
+        let arg1 = v:fname_in
+        if arg1 =~ ' ' | let arg1 = '"' . arg1 . '"' | endif
+        let arg2 = v:fname_new
+        if arg2 =~ ' ' | let arg2 = '"' . arg2 . '"' | endif
+        let arg3 = v:fname_out
+        if arg3 =~ ' ' | let arg3 = '"' . arg3 . '"' | endif
+        let eq = ''
+        if $VIMRUNTIME =~ ' '
+            if &sh =~ '\<cmd'
+                let cmd = '""' . $VIMRUNTIME . '\diff"'
+                let eq = '"'
+            else
+                let cmd = substitute($VIMRUNTIME, ' ', '" ', '') . '\diff"'
+            endif
         else
-            let cmd = substitute($VIMRUNTIME, ' ', '" ', '') . '\diff"'
+            let cmd = $VIMRUNTIME . '\diff'
         endif
-    else
-        let cmd = $VIMRUNTIME . '\diff'
-    endif
-    silent execute '!' . cmd . ' ' . opt . arg1 . ' ' . arg2 . ' > ' . arg3 . eq
-    endfunction
+        silent execute '!' . cmd . ' ' . opt . arg1 . ' ' . arg2 . ' > ' . arg3 . eq
+        endfunction
+endif
 
 " Below is customized settings
 let mapleader = ","
@@ -49,9 +51,14 @@ set guioptions-=r
 set guioptions-=b
 set guioptions-=L
 
+" Always show statusline
+set laststatus=2
+
+" show fencview and fugitive in statusline
+set statusline=[%n]%<%f%y%h%m[%{&fenc!=''?&fenc:&enc}:%{&ff}]%h%m%r%{fugitive#statusline()}\%r%=[%b\ 0x%B]\ %l\ of\ %L,%c%V\ Page\ %N\ %P
+
 " Setup fencview
 let g:fencview_autodetect = 0
-set statusline=[%n]%<%f%y%h%m[%{&fenc!=''?&fenc:&enc}:%{&ff}]%r%=[%b\ 0x%B]\ %l\ of\ %L,%c%V\ Page\ %N\ %P
 
 " Change dir to the first opening file
 " and don't auto change dir ever.
@@ -133,12 +140,6 @@ let Grep_Default_Options = '-r'
 
 " Set a.vim's shortcut
 nnoremap <F12> :A<CR>
-
-" Set QuickFix's short cut
-nnoremap <F7> :cn<CR>
-nnoremap <F6> :cp<CR>
-nnoremap <leader><F7> :cnewer<CR>
-nnoremap <leader><F6> :colder<CR>
 
 " Use F4 to call TagList Only
 nnoremap <F4> :Tlist<CR>

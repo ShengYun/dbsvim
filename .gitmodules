@@ -22,3 +22,9 @@
 [submodule "plugin-echofunc"]
 	path = bundle/echofunc
 	url = https://github.com/mbbill/echofunc.git
+[submodule "bundle/vim-fugitive"]
+	path = bundle/vim-fugitive
+	url = https://github.com/tpope/vim-fugitive.git
+[submodule "bundle/vim-unimpaired"]
+	path = bundle/vim-unimpaired
+	url = https://github.com/tpope/vim-unimpaired.git
