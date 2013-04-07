@@ -1,0 +1,8 @@
+*.orig
+*.bak
+*.taghl
+tags
+cscope.files
+cscope.out
+nscope.out
+*.swp
