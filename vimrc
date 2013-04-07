@@ -51,9 +51,14 @@ set guioptions-=r
 set guioptions-=b
 set guioptions-=L
 
+" Always show statusline
+set laststatus=2
+
+" show fencview and fugitive in statusline
+set statusline=[%n]%<%f%y%h%m[%{&fenc!=''?&fenc:&enc}:%{&ff}]%h%m%r%{fugitive#statusline()}\%r%=[%b\ 0x%B]\ %l\ of\ %L,%c%V\ Page\ %N\ %P
+
 " Setup fencview
 let g:fencview_autodetect = 0
-set statusline=[%n]%<%f%y%h%m[%{&fenc!=''?&fenc:&enc}:%{&ff}]%r%=[%b\ 0x%B]\ %l\ of\ %L,%c%V\ Page\ %N\ %P
 
 " Change dir to the first opening file
 " and don't auto change dir ever.
