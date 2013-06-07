@@ -137,7 +137,7 @@ nnoremap <leader><F4> :NERDTreeToggle<CR>
 " Add more file types if you need.
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 if has("win16") || has("win95") || has("win32") || has("win64")
-    nnoremap <leader><F11>
+    nnoremap <leader><F><R>
                 \ :AsyncCommand gfind . -iname '*.c' -exec gecho "\"{}\"" ';'
                 \ -o -iname '*.cpp' -exec gecho "\"{}\"" ';'
                 \ -o -iname '*.cc' -exec gecho "\"{}\"" ';'
@@ -148,7 +148,7 @@ if has("win16") || has("win95") || has("win32") || has("win64")
                 \ -o -iname '*.pl' -exec gecho "\"{}\"" ';'
                 \ -o -iname '*.py' -exec gecho "\"{}\"" ';' > cscope.files <CR>
 else
-    nnoremap <leader><F11>
+    nnoremap <leader><F><R>
                 \ :AsyncCommand find . -iname '*.c' -exec echo "\"{}\"" ';'
                 \ -o -iname '*.cpp' -exec echo "\"{}\"" ';'
                 \ -o -iname '*.cc' -exec echo "\"{}\"" ';'
@@ -161,23 +161,16 @@ else
 endif
 
 " This is for quickly updating cscope file without using GNU find
-nnoremap <leader><F5> :cs kill -1<CR>
+nnoremap <leader><S><R> :cs kill -1<CR>
     \:!cscope -b -i cscope.files -f cscope.out<CR>
     \:cs add .<CR>
     \:cs reset<CR>
 
-" Refresh ctags with leader F12
-nnoremap <leader><F12> :AsyncCommand ctags -R --c++-kinds=+p --fields=+ialS --extra=+q .<cr>
+" Refresh ctags with <leader><T><R>
+nnoremap <leader><T><R> :AsyncCommand ctags -R --c++-kinds=+p --fields=+ialS --extra=+q .<cr>
 
 " Delete spaces after each line
 nnoremap <F2> :%s/\s\+$//g <CR>
-
-" Tasklist configure
-" This can't be a nore map because it's written in
-" tasklist.vim
-nmap <C-T> <Plug>TaskList
-
-let g:tlTokenList = ['TODO', 'DBS', 'DBSM', 'dbs', 'dbsm']
 
 " Bufexplorer
 noremap <C-Tab> :BufExplorer<CR>
