@@ -31,6 +31,3 @@
 [submodule "bundle/ack"]
 	path = bundle/ack
 	url = https://github.com/mileszs/ack.vim.git
-[submodule "bundle/gtags.vim"]
-	path = bundle/gtags.vim
-	url = https://github.com/vim-scripts/gtags.vim.git
