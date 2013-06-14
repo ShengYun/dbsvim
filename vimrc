@@ -158,7 +158,10 @@ else
 endif
 
 " This is for quickly updating cscope file without using GNU find
-nnoremap <leader><F5>:!cscope -b -i cscope.files -f cscope.out<CR>
+nnoremap <leader><F5> :cs kill -1<CR>
+    \:!cscope -b -i cscope.files -f cscope.out<CR>
+    \:cs add .<CR>
+    \:cs reset<CR>
 
 " Refresh ctags with <leader><F12>
 nnoremap <leader><F12> :AsyncCommand ctags -R --c++-kinds=+p --fields=+ialS --extra=+q .<cr>
