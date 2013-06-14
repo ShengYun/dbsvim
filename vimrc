@@ -70,9 +70,6 @@ set expandtab
 let Tlist_Show_One_File=1
 let Tlist_Exit_OnlyWindow=1
 
-" Automatically add cscope.out to vim
-:cs add .
-
 " Enable quickfix to display cscope's result
 :set cscopequickfix=s-,c-,d-,i-,t-,e-
 
@@ -161,13 +158,13 @@ else
 endif
 
 " This is for quickly updating cscope file without using GNU find
-nnoremap <leader><F5> :cs kill -1<CR>
-    \:!cscope -b -i cscope.files -f cscope.out<CR>
-    \:cs add .<CR>
-    \:cs reset<CR>
+nnoremap <leader><F5>:!cscope -b -i cscope.files -f cscope.out<CR>
 
 " Refresh ctags with <leader><F12>
 nnoremap <leader><F12> :AsyncCommand ctags -R --c++-kinds=+p --fields=+ialS --extra=+q .<cr>
+
+" Automatically update Gtags
+let g:Gtags_Auto_Update = 1
 
 " Delete spaces after each line
 nnoremap <F2> :%s/\s\+$//g <CR>
