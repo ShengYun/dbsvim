@@ -5,6 +5,8 @@ call pathogen#infect()
 
 " Below is customized settings
 let mapleader = ","
+inoremap jk <Esc>
+inoremap <C-C> <Nop>
 
 " Allow colors in commandline mode
 if !has("gui_running")
@@ -28,7 +30,15 @@ set guioptions-=L
 set laststatus=2
 
 " show fencview and fugitive in statusline
-set statusline=[%n]%<%f%y%h%m[%{&fenc!=''?&fenc:&enc}:%{&ff}]%h%m%r%{fugitive#statusline()}\%r%=[%b\ 0x%B]\ %l\ of\ %L,%c%V\ Page\ %N\ %P
+set statusline=[%n]
+set statusline+=%<%f%y%h%m
+set statusline+=[%{&fenc!=''?&fenc:&enc}:%{&ff}]
+set statusline+=%h%m%r
+set statusline+=%{fugitive#statusline()}
+set statusline+=\%r%=[%b\ 0x%B]
+set statusline+=\ %l\ of\ %L,%c%V
+set statusline+=\ Page\ %N
+set statusline+=\ %P
 
 " Setup fencview
 let g:fencview_autodetect = 0
@@ -42,7 +52,7 @@ set noautochdir
 set nobackup
 
 " Ignore case sensitive
-set ic
+set ignorecase
 
 " Set highlight search result
 set hlsearch
@@ -51,7 +61,7 @@ set hlsearch
 set incsearch
 
 " Show line numbers
-set nu
+set number
 
 " Syntax highlight setting
 syntax enable
@@ -226,7 +236,6 @@ else
 endif
 
 " Omnifun's auto complete
-set nocp
 filetype plugin indent on
 set completeopt=longest,menu
 set wildmenu
@@ -261,7 +270,7 @@ inoremap <expr> <C-k> pumvisible() ? "\<C-p>" : "\<C-k>"
 " set tags+=C:/Program\ Files/boost\boost_1_47\boost\tags
 " set tags+=C:\MinGW\lib\gcc\mingw32\4.5.2\include\tags;
 
-au BufNewFile,BufRead,BufEnter *.cpp,*.hpp,*.cc,*.c,*.h set omnifunc=omni#cpp#complete#Main
+autocmd BufNewFile,BufRead,BufEnter *.cpp,*.hpp,*.cc,*.c,*.h set omnifunc=omni#cpp#complete#Main
 
 " OmniCpp config
 let OmniCpp_GlobalScopeSearch = 1  " 0 or 1
