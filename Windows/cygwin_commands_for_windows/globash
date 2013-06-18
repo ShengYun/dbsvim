@@ -88,4 +88,4 @@ if [ "`$__gtags_global_command -p 2>/dev/null`" = "" ]; then
 	done
 	echo
 fi
-exec bash --rcfile "/dev/env/DJDIR/share/gtags/globash.rc"
+exec bash --rcfile "c:/usr/share/gtags/globash.rc"
