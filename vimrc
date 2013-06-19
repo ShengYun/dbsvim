@@ -179,6 +179,9 @@ nnoremap <leader><F12> :AsyncCommand ctags -R --c++-kinds=+p --fields=+ialS --ex
 " Automatically update Gtags
 let g:Gtags_Auto_Update = 1
 
+" Map <C-]> with :tjump
+nnoremap <C-]> :tjump <C-R>=expand("<cword>")<CR><CR>
+
 " Delete spaces after each line
 nnoremap <F2> :%s/\s\+$//g <CR>
 
