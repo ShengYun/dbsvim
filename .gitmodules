@@ -37,9 +37,6 @@
 [submodule "bundle/vim-commentary"]
 	path = bundle/vim-commentary
 	url = https://github.com/tpope/vim-commentary.git
-[submodule "bundle/snipmate.vim"]
-	path = bundle/snipmate.vim
-	url = https://github.com/msanders/snipmate.vim.git
 [submodule "bundle/vim-lucius"]
 	path = bundle/vim-lucius
 	url = https://github.com/jonathanfilip/vim-lucius.git
