@@ -145,7 +145,7 @@ nnoremap <leader><F4> :NERDTreeToggle<CR>
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 if has("win16") || has("win95") || has("win32") || has("win64")
     nnoremap <leader><F11>
-                \ :AsyncCommand find . -iname '*.c' -exec gecho "\"{}\"" ';'
+                \ :AsyncCommand gfind . -iname '*.c' -exec gecho "\"{}\"" ';'
                 \ -o -iname '*.cpp' -exec gecho "\"{}\"" ';'
                 \ -o -iname '*.cc' -exec gecho "\"{}\"" ';'
                 \ -o -iname '*.h' -exec gecho "\"{}\"" ';'
