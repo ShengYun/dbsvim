@@ -145,15 +145,12 @@ nnoremap <leader><F4> :NERDTreeToggle<CR>
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 if has("win16") || has("win95") || has("win32") || has("win64")
     nnoremap <leader><F11>
-                \ :AsyncCommand gfind . -iname '*.c' -exec gecho "\"{}\"" ';'
+                \ :AsyncCommand find . -iname '*.c' -exec gecho "\"{}\"" ';'
                 \ -o -iname '*.cpp' -exec gecho "\"{}\"" ';'
                 \ -o -iname '*.cc' -exec gecho "\"{}\"" ';'
                 \ -o -iname '*.h' -exec gecho "\"{}\"" ';'
                 \ -o -iname '*.hpp' -exec gecho "\"{}\"" ';'
-                \ -o -iname '*.java' -exec gecho "\"{}\"" ';'
-                \ -o -iname '*.php' -exec gecho "\"{}\"" ';'
-                \ -o -iname '*.pl' -exec gecho "\"{}\"" ';'
-                \ -o -iname '*.py' -exec gecho "\"{}\"" ';' > cscope.files <CR>
+                \ -o -iname '*.java' -exec gecho "\"{}\"" ';' > cscope.files <CR>
 else
     nnoremap <leader><F11>
                 \ :AsyncCommand find . -iname '*.c' -exec echo "\"{}\"" ';'
@@ -161,10 +158,7 @@ else
                 \ -o -iname '*.cc' -exec echo "\"{}\"" ';'
                 \ -o -iname '*.h' -exec echo "\"{}\"" ';'
                 \ -o -iname '*.hpp' -exec echo "\"{}\"" ';'
-                \ -o -iname '*.java' -exec echo "\"{}\"" ';'
-                \ -o -iname '*.php' -exec echo "\"{}\"" ';'
-                \ -o -iname '*.pl' -exec echo "\"{}\"" ';'
-                \ -o -iname '*.py' -exec echo "\"{}\"" ';' > cscope.files <CR>
+                \ -o -iname '*.java' -exec echo "\"{}\"" ';' > cscope.files <CR>
 endif
 
 " This is for quickly updating cscope file without using GNU find
