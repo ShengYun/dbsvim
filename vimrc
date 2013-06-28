@@ -16,8 +16,15 @@ if !has("gui_running")
 else
     set t_Co=16
     " Color setting for GUI
-    colorscheme dbs
+    
+    " set background=dark
+    " colorscheme dbs
+    
+    set background=dark
+    colorscheme solarized
 endif
+
+call togglebg#map("<F5>")
 
 " Remove menu bar and tool bar
 set guioptions-=T
