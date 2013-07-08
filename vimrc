@@ -297,6 +297,7 @@ let &grepprg = 'grep --line-number --with-filename'
 
 " guifont for linux
 " set guifont=Monospace\ 12
+" set guifont=DejavuSansMono\ 12
 
 " guifont for mac
 " set guifont=Monaco:h12
