@@ -269,12 +269,16 @@ inoremap <expr> <C-b> pumvisible() ? "\<PageUp>\<C-p>\<C-n>" : "\<C-b>"
 inoremap <expr> <C-j> pumvisible() ? "\<C-n>" : "\<C-j>"
 inoremap <expr> <C-k> pumvisible() ? "\<C-p>" : "\<C-k>"
 
-" Omnicpp's setup
-" set tags+=tags;
-" set tags+=C:/Program\ Files/boost\boost_1_47\boost\tags
-" set tags+=C:\MinGW\lib\gcc\mingw32\4.5.2\include\tags;
 
+" autocmds
+
+" autocmd for omnicppcomplete
 autocmd BufNewFile,BufRead,BufEnter *.cpp,*.hpp,*.cc,*.c,*.h set omnifunc=omni#cpp#complete#Main
+
+" autocmd for vim-colors-solarized and vim-gitgutter
+" This line should be removed after https://github.com/altercation/vim-colors-solarized/pull/62
+" is merged into vim-colors-solarized's master.
+autocmd ColorScheme * highlight clear SignColumn
 
 " OmniCpp config
 let OmniCpp_GlobalScopeSearch = 1  " 0 or 1
