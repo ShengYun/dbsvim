@@ -278,6 +278,7 @@ autocmd BufNewFile,BufRead,BufEnter *.cpp,*.hpp,*.cc,*.c,*.h set omnifunc=omni#c
 " autocmd for vim-colors-solarized and vim-gitgutter
 " This line should be removed after https://github.com/altercation/vim-colors-solarized/pull/62
 " is merged into vim-colors-solarized's master.
+highlight clear SignColumn
 autocmd ColorScheme * highlight clear SignColumn
 
 " OmniCpp config
