@@ -296,12 +296,14 @@ nnoremap <C-\> :NeoComplCacheToggle<CR>
 let &grepprg = 'grep --line-number --with-filename'
 
 " guifont for linux
-" set guifont=Monospace\ 12
-" set guifont=DejavuSansMono\ 12
+" set guifont=Monospace\ 13
+" set guifont=DejavuSansMono\ 13
 
 " guifont for mac
 " set guifont=Monaco:h12
 
 " guifont for windows
 " set guifont=Fixedsys:h12
+" set guifont=Consolas:h14
+" set guifont=DejaVu\ Sans\ Mono:h13
 
