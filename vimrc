@@ -1,7 +1,10 @@
-set nocompatible
+" Get pathogen ready first
+runtime bundle/vim-pathogen/autoload/pathogen.vim
 
 " Init pathogen.vim
 call pathogen#infect()
+
+set nocompatible
 
 " Below is customized settings
 let mapleader = ","
