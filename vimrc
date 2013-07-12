@@ -86,10 +86,6 @@ set shiftwidth=4
 set shiftround
 set expandtab
 
-" Set Tag List
-let Tlist_Show_One_File=1
-let Tlist_Exit_OnlyWindow=1
-
 " Enable quickfix to display cscope's result
 :set cscopequickfix=s-,c-,d-,i-,t-,e-
 
@@ -176,7 +172,7 @@ nnoremap <leader><F5> :cs kill -1<CR>
     \:cs reset<CR>
 
 " Refresh ctags with <leader><F12>
-nnoremap <leader><F12> :AsyncCommand ctags -R --c++-kinds=+p --fields=+ialS --extra=+q .<cr>
+nnoremap <leader><F12> :AsyncCommand ctags -R<cr>
 
 " Automatically update Gtags
 let g:Gtags_Auto_Update = 1
