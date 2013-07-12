@@ -128,10 +128,8 @@ let Grep_Default_Options = '-r'
 " Set a.vim's shortcut
 nnoremap <F12> :A<CR>
 
-" Use F4 to call TagList Only
-nnoremap <F4> :Tlist<CR>
-let g:Tlist_WinWidth = 50
-let g:Tlist_Use_Right_Window = 1
+" Use F4 to call Tabbar
+nnoremap <F4> :TagbarToggle<CR>
 
 " Use leader F4 to call Nerdtree
 nnoremap <leader><F4> :NERDTreeToggle<CR>
