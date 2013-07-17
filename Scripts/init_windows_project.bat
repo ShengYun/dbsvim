@@ -7,7 +7,7 @@ del *.taghl
 
 python get_cscope_files.py .
 
-cscope -b -i cscope.files -f cscope.out
+cscope -bq -i cscope.files -f cscope.out
 
 ctags -RV
 
