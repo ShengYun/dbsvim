@@ -145,10 +145,11 @@ nnoremap <leader><F4> :NERDTreeToggle<CR>
 " put grep in your PATH
 "
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Add more file types if you need.
+" Don't add other types because cscope only works with
+" C, C++, and java
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 if has("win16") || has("win95") || has("win32") || has("win64")
-    nnoremap <leader><F11>
+    nnoremap <leader><F10>
                 \ :AsyncCommand gfind . -iname '*.c' -exec gecho "\"{}\"" ';'
                 \ -o -iname '*.cpp' -exec gecho "\"{}\"" ';'
                 \ -o -iname '*.cc' -exec gecho "\"{}\"" ';'
@@ -156,7 +157,7 @@ if has("win16") || has("win95") || has("win32") || has("win64")
                 \ -o -iname '*.hpp' -exec gecho "\"{}\"" ';'
                 \ -o -iname '*.java' -exec gecho "\"{}\"" ';' > cscope.files <CR>
 else
-    nnoremap <leader><F11>
+    nnoremap <leader><F10>
                 \ :AsyncCommand find . -iname '*.c' -exec echo "\"{}\"" ';'
                 \ -o -iname '*.cpp' -exec echo "\"{}\"" ';'
                 \ -o -iname '*.cc' -exec echo "\"{}\"" ';'
@@ -164,6 +165,8 @@ else
                 \ -o -iname '*.hpp' -exec echo "\"{}\"" ';'
                 \ -o -iname '*.java' -exec echo "\"{}\"" ';' > cscope.files <CR>
 endif
+
+nnoremap <leader><F11> :AsyncCommand python get_cscope_files.py .<CR>
 
 " This is for quickly updating cscope file without using GNU find
 nnoremap <leader><F5> :cs kill -1<CR>
@@ -174,8 +177,8 @@ nnoremap <leader><F5> :cs kill -1<CR>
 " Refresh ctags with <leader><F12>
 nnoremap <leader><F12> :AsyncCommand ctags -R<cr>
 
-" Automatically update Gtags
-let g:Gtags_Auto_Update = 1
+" Automatically update Gtags or not
+let g:Gtags_Auto_Update = 0
 
 " Map <C-]> with :tjump
 nnoremap <C-]> :tjump <C-R>=expand("<cword>")<CR><CR>
