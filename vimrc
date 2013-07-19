@@ -149,7 +149,7 @@ nnoremap <leader><F4> :NERDTreeToggle<CR>
 " C, C++, and java
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 if has("win16") || has("win95") || has("win32") || has("win64")
-    nnoremap <leader><F10>
+    nnoremap <leader><F11>
                 \ :AsyncCommand gfind . -iname '*.c' -exec gecho "\"{}\"" ';'
                 \ -o -iname '*.cpp' -exec gecho "\"{}\"" ';'
                 \ -o -iname '*.cc' -exec gecho "\"{}\"" ';'
@@ -157,7 +157,7 @@ if has("win16") || has("win95") || has("win32") || has("win64")
                 \ -o -iname '*.hpp' -exec gecho "\"{}\"" ';'
                 \ -o -iname '*.java' -exec gecho "\"{}\"" ';' > cscope.files <CR>
 else
-    nnoremap <leader><F10>
+    nnoremap <leader><F11>
                 \ :AsyncCommand find . -iname '*.c' -exec echo "\"{}\"" ';'
                 \ -o -iname '*.cpp' -exec echo "\"{}\"" ';'
                 \ -o -iname '*.cc' -exec echo "\"{}\"" ';'
@@ -165,8 +165,6 @@ else
                 \ -o -iname '*.hpp' -exec echo "\"{}\"" ';'
                 \ -o -iname '*.java' -exec echo "\"{}\"" ';' > cscope.files <CR>
 endif
-
-nnoremap <leader><F11> :AsyncCommand python get_cscope_files.py .<CR>
 
 " This is for quickly updating cscope file without using GNU find
 nnoremap <leader><F5> :cs kill -1<CR>
