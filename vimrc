@@ -168,7 +168,7 @@ endif
 
 " This is for quickly updating cscope file without using GNU find
 nnoremap <leader><F5> :cs kill -1<CR>
-    \:!cscope -bq<CR>
+    \:!cscope -bqv<CR>
     \:cs add cscope.out<CR>
     \:cs reset<CR>
 
