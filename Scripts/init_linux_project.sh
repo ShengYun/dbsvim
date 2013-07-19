@@ -7,7 +7,7 @@ rm *.taghl
 
 python get_cscope_files.py .
 
-cscope -bq -i cscope.files -f cscope.out
+cscope -bqV
 
 ctags -RV
 
