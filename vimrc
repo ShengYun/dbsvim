@@ -170,8 +170,8 @@ nnoremap <leader><F11> :AsyncCommand python get_cscope_files.py .<CR>
 
 " This is for quickly updating cscope file without using GNU find
 nnoremap <leader><F5> :cs kill -1<CR>
-    \:!cscope -bq -i cscope.files -f cscope.out<CR>
-    \:cs add .<CR>
+    \:!cscope -bq<CR>
+    \:cs add cscope.out<CR>
     \:cs reset<CR>
 
 " Refresh ctags with <leader><F12>
