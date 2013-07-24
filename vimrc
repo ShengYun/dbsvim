@@ -303,7 +303,8 @@ let &grepprg = 'grep --line-number --with-filename'
 " set guifont=DejavuSansMono\ 13
 
 " guifont for mac
-" set guifont=Monaco:h12
+" set guifont=Monaco:h14
+" set guifont=DejaVu\ Sans\ Mono:h16
 
 " guifont for windows
 " set guifont=Fixedsys:h12
