@@ -273,6 +273,9 @@ autocmd BufNewFile,BufRead,BufEnter *.cpp,*.hpp,*.cc,*.c,*.h set omnifunc=omni#c
 highlight clear SignColumn
 autocmd ColorScheme * highlight clear SignColumn
 
+" Do not let gitgutter do the realtime update
+let g:gitgutter_realtime = 0
+
 " OmniCpp config
 let OmniCpp_GlobalScopeSearch = 1  " 0 or 1
 let OmniCpp_NamespaceSearch = 1   " 0 ,  1 or 2
