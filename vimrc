@@ -216,21 +216,6 @@ let g:ctrlp_custom_ignore = {
 " upon exiting Vim: >
 let g:ctrlp_clear_cache_on_exit = 0
 
-
-" Pydiction
-if has("win16") || has("win95") || has("win32") || has("win64")
-    let g:pydiction_location = '$VIM\vimfiles\bundle\pydiction\ftplugin\complete-dict'
-else
-    let g:pydiction_location = '$HOME/.vim/bundle/pydiction/ftplugin/complete-dict'
-endif
-
-" Python-Mode
-let g:pymode_lint_write = 0
-" Values: 0 or 1.
-" Default: 1.
-" 
-" If this option is set to 0, then pylint auto-checking on every save is disabled.
-
 " Omnifun's auto complete
 filetype plugin indent on
 set completeopt=longest,menu
