@@ -24,6 +24,5 @@ If you are a windows user, you may find something useful in **cygwin\_commands\_
 - ctags
 - dejavu fonts
 - git
-- gnu global(gtags)
-- pep8
-- python 2.6+
+- gnu global (gtags)
+- python 2.7+ (if you only have python 2.6, you should install the argparse module)
