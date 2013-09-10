@@ -281,11 +281,16 @@ nnoremap <C-\> :NeoComplCacheToggle<CR>
 " AsyncCommand setup
 let &grepprg = 'grep --line-number --with-filename'
 
+" jedi-vim setup
+let g:jedi#usages_command = "<leader>s"
+let g:jedi#use_tabs_not_buffers = 0
+
 " python-mode setup
 let g:pymode_doc = 0
+let g:pymode_run = 0
 let g:pymode_rope = 0
-let g:pymode_lint_checker = "pyflakes,pep8"
 let g:pymode_lint_write = 0
+let g:pymode_lint_checker = "pyflakes,pep8"
 nnoremap <leader>8 :PyLint<CR>
 
 
