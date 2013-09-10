@@ -281,6 +281,14 @@ nnoremap <C-\> :NeoComplCacheToggle<CR>
 " AsyncCommand setup
 let &grepprg = 'grep --line-number --with-filename'
 
+" python-mode setup
+let g:pymode_doc = 0
+let g:pymode_rope = 0
+let g:pymode_lint_checker = "pyflakes,pep8"
+let g:pymode_lint_write = 0
+nnoremap <leader>8 :PyLint<CR>
+
+
 " guifont for linux
 " set guifont=Monospace\ 13
 " set guifont=DejavuSansMono\ 13
