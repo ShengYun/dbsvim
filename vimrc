@@ -281,9 +281,6 @@ nnoremap <C-\> :NeoComplCacheToggle<CR>
 " AsyncCommand setup
 let &grepprg = 'grep --line-number --with-filename'
 
-" pep8 config
-let g:pep8_map = '<leader>8' 
-
 " guifont for linux
 " set guifont=Monospace\ 13
 " set guifont=DejavuSansMono\ 13
