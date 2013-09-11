@@ -287,10 +287,10 @@ let g:jedi#use_tabs_not_buffers = 0
 
 " python-mode setup
 let g:pymode_doc = 0
-let g:pymode_run = 0
-let g:pymode_rope = 0
-let g:pymode_lint_write = 0
 let g:pymode_lint_checker = "pyflakes,pep8"
+let g:pymode_lint_write = 0
+let g:pymode_rope = 0
+let g:pymode_run_key = "<F7>"
 nnoremap <leader>8 :PyLint<CR>
 
 
