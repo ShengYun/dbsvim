@@ -284,6 +284,7 @@ let &grepprg = 'grep --line-number --with-filename'
 " jedi-vim setup
 let g:jedi#usages_command = "<leader>s"
 let g:jedi#use_tabs_not_buffers = 0
+let g:jedi#popup_on_dot = 0
 
 " python-mode setup
 let g:pymode_doc = 0
