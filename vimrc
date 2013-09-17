@@ -248,7 +248,6 @@ inoremap <expr> <C-j> pumvisible() ? "\<C-n>" : "\<C-j>"
 inoremap <expr> <C-k> pumvisible() ? "\<C-p>" : "\<C-k>"
 
 
-" autocmds
 
 " autocmd for omnicppcomplete
 autocmd BufNewFile,BufRead,BufEnter *.cpp,*.hpp,*.cc,*.c,*.h set omnifunc=omni#cpp#complete#Main
@@ -278,6 +277,8 @@ let g:neocomplcache_enable_at_startup = 1
 let g:neocomplcache_max_menu_width = 70
 nnoremap <C-\> :NeoComplCacheToggle<CR>
 
+" lock neocomplcache if writting python, jedi will take control 
+autocmd BufNewFile,BufRead,BufEnter *.py execute ':NeoComplCacheLock'
 " AsyncCommand setup
 let &grepprg = 'grep --line-number --with-filename'
 
@@ -285,6 +286,7 @@ let &grepprg = 'grep --line-number --with-filename'
 let g:jedi#usages_command = "<leader>s"
 let g:jedi#use_tabs_not_buffers = 0
 let g:jedi#popup_on_dot = 0
+let g:jedi#show_call_signatures = 1
 
 " python-mode setup
 let g:pymode_doc = 0
