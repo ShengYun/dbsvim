@@ -279,13 +279,14 @@ nnoremap <C-\> :NeoComplCacheToggle<CR>
 
 " lock neocomplcache if writting python, jedi will take control 
 autocmd BufNewFile,BufRead,BufEnter *.py execute ':NeoComplCacheLock'
+
 " AsyncCommand setup
 let &grepprg = 'grep --line-number --with-filename'
 
 " jedi-vim setup
 let g:jedi#usages_command = "<leader>s"
 let g:jedi#use_tabs_not_buffers = 0
-let g:jedi#popup_on_dot = 0
+let g:jedi#popup_on_dot = 1
 let g:jedi#show_call_signatures = 1
 
 " python-mode setup
