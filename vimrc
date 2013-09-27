@@ -282,6 +282,10 @@ autocmd BufNewFile,BufRead,BufEnter *.py execute ':NeoComplCacheLock'
 
 " set foldmethod to indent if editing a python file
 autocmd BufNewFile,BufRead,BufEnter *.py set foldmethod=indent
+" set indents to 4 if editing a python file
+autocmd BufNewFile,BufRead,BufEnter *.py set tabstop=4
+autocmd BufNewFile,BufRead,BufEnter *.py set softtabstop=4
+autocmd BufNewFile,BufRead,BufEnter *.py set shiftwidth=4
 " AsyncCommand setup
 let &grepprg = 'grep --line-number --with-filename'
 
