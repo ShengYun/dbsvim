@@ -289,12 +289,6 @@ let g:jedi#use_tabs_not_buffers = 0
 let g:jedi#popup_on_dot = 1
 let g:jedi#show_call_signatures = 1
 
-" python-mode setup
-let g:pymode_doc = 0
-let g:pymode_lint_checker = "pyflakes,pep8"
-let g:pymode_lint_write = 1
-let g:pymode_rope = 0
-let g:pymode_run_key = "<F7>"
 " nnoremap <leader>8 :PyLint<CR>
 
 
