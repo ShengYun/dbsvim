@@ -305,4 +305,3 @@ let g:pep8_map = "<leader>8"
 " set guifont=Fixedsys:h12
 " set guifont=Consolas:h14
 " set guifont=DejaVu\ Sans\ Mono:h13
-
