@@ -280,6 +280,8 @@ nnoremap <C-\> :NeoComplCacheToggle<CR>
 " lock neocomplcache if writting python, jedi will take control 
 autocmd BufNewFile,BufRead,BufEnter *.py execute ':NeoComplCacheLock'
 
+" set foldmethod to indent if editing a python file
+autocmd BufNewFile,BufRead,BufEnter *.py set foldmethod=indent
 " AsyncCommand setup
 let &grepprg = 'grep --line-number --with-filename'
 
