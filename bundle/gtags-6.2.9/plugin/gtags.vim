@@ -466,7 +466,7 @@ endfunction
 " Auto update of tag files using incremental update facility.
 "
 function! s:GtagsAutoUpdate()
-    let l:result = system(s:global_command . " --single-update \"" . expand("%") . "\"")
+    let l:result = system(s:global_command . " -u --single-update=\"" . expand("%") . "\"")
 endfunction
 
 "
