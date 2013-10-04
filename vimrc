@@ -286,6 +286,10 @@ autocmd BufNewFile,BufRead,BufEnter *.py set foldmethod=indent
 autocmd BufNewFile,BufRead,BufEnter *.py set tabstop=4
 autocmd BufNewFile,BufRead,BufEnter *.py set softtabstop=4
 autocmd BufNewFile,BufRead,BufEnter *.py set shiftwidth=4
+
+" setup vim-commentary for python files
+autocmd FileType python set commentstring=#\ %s
+
 " AsyncCommand setup
 let &grepprg = 'grep --line-number --with-filename'
 
