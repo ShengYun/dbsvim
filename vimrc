@@ -261,6 +261,8 @@ autocmd ColorScheme * highlight clear SignColumn
 " Do not let gitgutter do the realtime update
 let g:gitgutter_realtime = 0
 
+nnoremap <leader>j :GitGutterNextHunk<cr>
+nnoremap <leader>k :GitGutterPrevHunk<cr>
 " OmniCpp config
 let OmniCpp_GlobalScopeSearch = 1  " 0 or 1
 let OmniCpp_NamespaceSearch = 1   " 0 ,  1 or 2
