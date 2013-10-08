@@ -1,11 +1,11 @@
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" CSCOPE settings for vim           
+" CSCOPE settings for vim
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "
 " This file contains some boilerplate settings for vim's cscope interface,
 " plus some keyboard mappings that I've found useful.
 "
-" USAGE: 
+" USAGE:
 " -- vim 6:     Stick this file in your ~/.vim/plugin directory (or in a
 "               'plugin' directory in some other directory that is in your
 "               'runtimepath'.
@@ -13,7 +13,7 @@
 " -- vim 5:     Stick this file somewhere and 'source cscope.vim' it from
 "               your ~/.vimrc file (or cut and paste it into your .vimrc).
 "
-" NOTE: 
+" NOTE:
 " These key maps use multiple keystrokes (2 or 3 keys).  If you find that vim
 " keeps timing you out before you can complete them, try changing your timeout
 " settings, as explained below.
@@ -25,7 +25,7 @@
 
 
 " This tests to see if vim was configured with the '--enable-cscope' option
-" when it was compiled.  If it wasn't, time to recompile vim... 
+" when it was compiled.  If it wasn't, time to recompile vim...
 if has("cscope")
 
     """"""""""""" Standard cscope/vim boilerplate
@@ -39,14 +39,14 @@ if has("cscope")
 
     " add any cscope database in current directory
     if filereadable("cscope.out")
-        cs add cscope.out  
-    " else add the database pointed to by environment variable 
+        cs add cscope.out
+    " else add the database pointed to by environment variable
     elseif $CSCOPE_DB != ""
         cs add $CSCOPE_DB
     endif
 
     " show msg when any other cscope db added
-    set cscopeverbose  
+    set cscopeverbose
 
     " Enable quickfix to display cscope's result
     :set cscopequickfix=s-,c-,d-,i-,t-,e-
@@ -87,28 +87,28 @@ if has("cscope")
     " To do the first type of search, hit 'CTRL-\', followed by one of the
     " cscope search types above (s,g,c,t,e,f,i,d).  The result of your cscope
     " search will be displayed in the current window.  You can use CTRL-T to
-    " go back to where you were before the search.  
+    " go back to where you were before the search.
     "
 
-    nnoremap <leader>s :cs find s <C-R>=expand("<cword>")<CR><CR>	
-    nnoremap <leader>g :cs find g <C-R>=expand("<cword>")<CR><CR>	
-    nnoremap <leader>c :cs find c <C-R>=expand("<cword>")<CR><CR>	
-    nnoremap <leader>t :cs find t <C-R>=expand("<cword>")<CR><CR>	
-    nnoremap <leader>e :cs find e <C-R>=expand("<cword>")<CR><CR>	
-    nnoremap <leader>f :cs find f <C-R>=expand("<cfile>")<CR><CR>	
+    nnoremap <leader>s :cs find s <C-R>=expand("<cword>")<CR><CR>
+    nnoremap <leader>g :cs find g <C-R>=expand("<cword>")<CR><CR>
+    nnoremap <leader>c :cs find c <C-R>=expand("<cword>")<CR><CR>
+    nnoremap <leader>t :cs find t <C-R>=expand("<cword>")<CR><CR>
+    nnoremap <leader>e :cs find e <C-R>=expand("<cword>")<CR><CR>
+    nnoremap <leader>f :cs find f <C-R>=expand("<cfile>")<CR><CR>
     nnoremap <leader>i :cs find i ^<C-R>=expand("<cfile>")<CR>$<CR>
-    nnoremap <leader>d :cs find d <C-R>=expand("<cword>")<CR><CR>	
+    nnoremap <leader>d :cs find d <C-R>=expand("<cword>")<CR><CR>
 
     " Map 'CTRL_' to search keyword from system clipboard
 
-    nnoremap <C-_>s :cs find s <C-R>*<CR><CR>	
-    nnoremap <C-_>g :cs find g <C-R>*<CR><CR>	
-    nnoremap <C-_>c :cs find c <C-R>*<CR><CR>	
-    nnoremap <C-_>t :cs find t <C-R>*<CR><CR>	
-    nnoremap <C-_>e :cs find e <C-R>*<CR><CR>	
-    nnoremap <C-_>f :cs find f <C-R>*<CR><CR>	
+    nnoremap <C-_>s :cs find s <C-R>*<CR><CR>
+    nnoremap <C-_>g :cs find g <C-R>*<CR><CR>
+    nnoremap <C-_>c :cs find c <C-R>*<CR><CR>
+    nnoremap <C-_>t :cs find t <C-R>*<CR><CR>
+    nnoremap <C-_>e :cs find e <C-R>*<CR><CR>
+    nnoremap <C-_>f :cs find f <C-R>*<CR><CR>
     nnoremap <C-_>i :cs find i ^<C-R>*<CR>$<CR>
-    nnoremap <C-_>d :cs find d <C-R>*<CR><CR>	
+    nnoremap <C-_>d :cs find d <C-R>*<CR><CR>
 
     " Using 'CTRL-spacebar' (intepreted as CTRL-@ by vim) then a search type
     " makes the vim window split horizontally, with search result displayed in
@@ -116,32 +116,32 @@ if has("cscope")
     "
     " (Note: earlier versions of vim may not have the :scs command, but it
     " can be simulated roughly via:
-    "    nmap <F12>s <C-W><C-S> :cs find s <C-R>=expand("<cword>")<CR><CR>	
+    "    nmap <F12>s <C-W><C-S> :cs find s <C-R>=expand("<cword>")<CR><CR>
 
-    nnoremap <leader><leader>s :scs find s <C-R>=expand("<cword>")<CR><CR>	
-    nnoremap <leader><leader>g :scs find g <C-R>=expand("<cword>")<CR><CR>	
-    nnoremap <leader><leader>c :scs find c <C-R>=expand("<cword>")<CR><CR>	
-    nnoremap <leader><leader>t :scs find t <C-R>=expand("<cword>")<CR><CR>	
-    nnoremap <leader><leader>e :scs find e <C-R>=expand("<cword>")<CR><CR>	
-    nnoremap <leader><leader>f :scs find f <C-R>=expand("<cfile>")<CR><CR>	
-    nnoremap <leader><leader>i :scs find i ^<C-R>=expand("<cfile>")<CR>$<CR>	
-    nnoremap <leader><leader>d :scs find d <C-R>=expand("<cword>")<CR><CR>	
+    nnoremap <leader><space>s :scs find s <C-R>=expand("<cword>")<CR><CR>
+    nnoremap <leader><space>g :scs find g <C-R>=expand("<cword>")<CR><CR>
+    nnoremap <leader><space>c :scs find c <C-R>=expand("<cword>")<CR><CR>
+    nnoremap <leader><space>t :scs find t <C-R>=expand("<cword>")<CR><CR>
+    nnoremap <leader><space>e :scs find e <C-R>=expand("<cword>")<CR><CR>
+    nnoremap <leader><space>f :scs find f <C-R>=expand("<cfile>")<CR><CR>
+    nnoremap <leader><space>i :scs find i ^<C-R>=expand("<cfile>")<CR>$<CR>
+    nnoremap <leader><space>d :scs find d <C-R>=expand("<cword>")<CR><CR>
 
 
-    " Hitting CTRL-space *twice* before the search type does a vertical 
+    " Hitting CTRL-space *twice* before the search type does a vertical
     " split instead of a horizontal one (vim 6 and up only)
     "
     " (Note: you may wish to put a 'set splitright' in your .vimrc
     " if you prefer the new window on the right instead of the left
 
-    nnoremap <leader>ks :vert scs find s <C-R>=expand("<cword>")<CR><CR>
-    nnoremap <leader>kg :vert scs find g <C-R>=expand("<cword>")<CR><CR>
-    nnoremap <leader>kc :vert scs find c <C-R>=expand("<cword>")<CR><CR>
-    nnoremap <leader>kt :vert scs find t <C-R>=expand("<cword>")<CR><CR>
-    nnoremap <leader>ke :vert scs find e <C-R>=expand("<cword>")<CR><CR>
-    nnoremap <leader>kf :vert scs find f <C-R>=expand("<cfile>")<CR><CR>	
-    nnoremap <leader>ki :vert scs find i ^<C-R>=expand("<cfile>")<CR>$<CR>	
-    nnoremap <leader>kd :vert scs find d <C-R>=expand("<cword>")<CR><CR>
+    nnoremap <leader><leader>s :vert scs find s <C-R>=expand("<cword>")<CR><CR>
+    nnoremap <leader><leader>g :vert scs find g <C-R>=expand("<cword>")<CR><CR>
+    nnoremap <leader><leader>c :vert scs find c <C-R>=expand("<cword>")<CR><CR>
+    nnoremap <leader><leader>t :vert scs find t <C-R>=expand("<cword>")<CR><CR>
+    nnoremap <leader><leader>e :vert scs find e <C-R>=expand("<cword>")<CR><CR>
+    nnoremap <leader><leader>f :vert scs find f <C-R>=expand("<cfile>")<CR><CR>
+    nnoremap <leader><leader>i :vert scs find i ^<C-R>=expand("<cfile>")<CR>$<CR>
+    nnoremap <leader><leader>d :vert scs find d <C-R>=expand("<cword>")<CR><CR>
 
 
     """"""""""""" key map timeouts
@@ -150,7 +150,7 @@ if has("cscope")
     " You may find that too short with the above typemaps.  If so, you should
     " either turn off mapping timeouts via 'notimeout'.
     "
-    "set notimeout 
+    "set notimeout
     "
     " Or, you can keep timeouts, by uncommenting the timeoutlen line below,
     " with your own personal favorite value (in milliseconds):
@@ -163,7 +163,7 @@ if has("cscope")
     " delays as vim waits for a keystroke after you hit ESC (it will be
     " waiting to see if the ESC is actually part of a key code like <F1>).
     "
-    "set ttimeout 
+    "set ttimeout
     "
     " personally, I find a tenth of a second to work well for key code
     " timeouts. If you experience problems and have a slow terminal or network
