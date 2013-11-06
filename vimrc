@@ -27,8 +27,6 @@ else
     colorscheme solarized
 endif
 
-call togglebg#map("<F7>")
-
 " Remove menu bar and tool bar
 set guioptions-=T
 set guioptions-=m
