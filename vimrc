@@ -290,8 +290,13 @@ autocmd BufNewFile,BufRead,BufEnter *.py set shiftwidth=4
 " setup vim-commentary for python files
 autocmd FileType python set commentstring=#\ %s
 
-" AsyncCommand setup
+" AsyncCommand and Vim-LaTeX setup
 let &grepprg = 'grep --line-number --with-filename'
+" set grepprg=grep\ -nH\ $*
+
+" Vim-LaTex setup
+" set shellslash
+let g:tex_flavor='latex'
 
 " jedi-vim setup
 let g:jedi#usages_command = "<leader>s"

@@ -61,3 +61,6 @@
 [submodule "bundle/pep8"]
 	path = bundle/pep8
 	url = https://github.com/vim-scripts/pep8.git
+[submodule "bundle/vim-latex"]
+	path = bundle/vim-latex
+	url = http://git.code.sf.net/p/vim-latex/vim-latex
