@@ -20,6 +20,7 @@ or **update-windows-vim.bat**
 If you are a windows user, you may find something useful in **cygwin\_commands\_for\_windows**
 
 - ack
+- ag (the_silver_searcher)
 - cscope
 - ctags
 - dejavu fonts

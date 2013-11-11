@@ -294,6 +294,10 @@ autocmd FileType python set commentstring=#\ %s
 let &grepprg = 'grep --line-number --with-filename'
 " set grepprg=grep\ -nH\ $*
 
+" Ack setup from Steve Losh
+nnoremap <leader>a :Ack!<space>
+let g:ackprg = 'ag --smart-case --nogroup --nocolor --column'
+
 " Vim-LaTex setup
 " set shellslash
 let g:tex_flavor='latex'
@@ -314,7 +318,7 @@ let g:pep8_map = "<leader>8"
 
 " guifont for mac
 " set guifont=Monaco:h14
-" set guifont=DejaVu\ Sans\ Mono:h16
+" set guifont=DejaVu\ Sans\ Mono:h20
 
 " guifont for windows
 " set guifont=Fixedsys:h12
