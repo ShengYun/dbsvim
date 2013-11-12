@@ -64,3 +64,6 @@
 [submodule "bundle/vim-latex"]
 	path = bundle/vim-latex
 	url = http://git.code.sf.net/p/vim-latex/vim-latex
+[submodule "bundle/molokai"]
+	path = bundle/molokai
+	url = https://github.com/tomasr/molokai.git
