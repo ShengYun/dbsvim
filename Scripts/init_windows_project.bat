@@ -9,6 +9,6 @@ python get_cscope_files.py .
 
 cscope -bqv
 
-ctags -RV
+ctags --fields=+l -RV
 
 gtags -v
