@@ -312,7 +312,7 @@ let g:jedi#show_call_signatures = 1
 let g:pep8_map = "<leader>8"
 
 " Optional YouCompleteMe
-" source ~/ycm_extra_conf/ycm.vim
+" source ~/.vimycm/ycm.vim
 
 " guifont for linux
 " set guifont=Monospace\ 13
