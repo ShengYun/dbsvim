@@ -311,6 +311,8 @@ let g:jedi#show_call_signatures = 1
 " pep8 config
 let g:pep8_map = "<leader>8"
 
+" Optional YouCompleteMe
+" source ~/ycm_extra_conf/ycm.vim
 
 " guifont for linux
 " set guifont=Monospace\ 13
