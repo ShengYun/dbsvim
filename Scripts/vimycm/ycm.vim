@@ -1,4 +1,10 @@
-let g:ycm_global_ycm_extra_conf = '~/.vimycm/ycm_extra_conf.py'
+if has("win16") || has("win95") || has("win32") || has("win64")
+    let g:ycm_global_ycm_extra_conf = 'C:\Program Files\Vim\vimfiles\vimycm\ycm_extra_conf.py'
+    let g:ycm_confirm_extra_conf = 0
+else
+    let g:ycm_global_ycm_extra_conf = '~/.vimycm/ycm_extra_conf.py'
+endif
+
 let g:ycm_collect_identifiers_from_tags_files = 1
 let g:ycm_seed_identifiers_with_syntax = 1
 let g:ycm_filetype_blacklist = {
