@@ -49,6 +49,7 @@ set statusline+=\ Page\ %N
 set statusline+=\ %P
 
 set wildmenu
+filetype plugin indent on
 
 " Setup fencview
 let g:fencview_autodetect = 0
