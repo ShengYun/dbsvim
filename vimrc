@@ -71,8 +71,8 @@ set hlsearch
 " Set search
 set incsearch
 
-" Show line numbers
-set number
+" Show relative line numbers
+set relativenumber
 
 " Syntax highlight setting
 syntax enable
@@ -280,7 +280,11 @@ let g:pep8_map = "<leader>8"
 " UltiSnips config
 let g:UltiSnipsExpandTrigger = "<C-J>"
 
-" Optional YouCompleteMe
+" Uncomment to disable YouCompleteMe
+" This will disable YouCompleteMe even if YouCompleteMe is in the runtimepath
+" let g:loaded_youcompleteme = 1
+
+" Optional YouCompleteMe (currently only working on MacOS/Linux)
 " Enabling YouCompleteMe will disable NeoComplCache
 " source ~/.vimycm/ycm.vim
 " source C:\Program Files\Vim\vimfiles\vimycm\ycm.vim
