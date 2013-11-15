@@ -5,7 +5,9 @@ else
     let g:ycm_global_ycm_extra_conf = '~/.vimycm/ycm_extra_conf.py'
 endif
 
-let g:ycm_collect_identifiers_from_tags_files = 1
+" Don't know why this is not working, will fix later
+" let g:ycm_collect_identifiers_from_tags_files = 1
+
 let g:ycm_seed_identifiers_with_syntax = 1
 let g:ycm_filetype_blacklist = {
       \ 'tagbar' : 1,

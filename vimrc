@@ -313,7 +313,7 @@ let g:pep8_map = "<leader>8"
 
 " Optional YouCompleteMe
 " source ~/.vimycm/ycm.vim
-" source "C:\Program Files\Vim\vimfiles\vimycm\ycm.vim"
+" source C:\Program Files\Vim\vimfiles\vimycm\ycm.vim
 
 " guifont for linux
 " set guifont=Monospace\ 13
