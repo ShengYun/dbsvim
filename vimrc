@@ -48,6 +48,8 @@ set statusline+=\ %l\ of\ %L,%c%V
 set statusline+=\ Page\ %N
 set statusline+=\ %P
 
+set wildmenu
+
 " Setup fencview
 let g:fencview_autodetect = 0
 
