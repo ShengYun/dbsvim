@@ -276,6 +276,9 @@ let g:jedi#show_call_signatures = 1
 " pep8 config
 let g:pep8_map = "<leader>8"
 
+" UltiSnips config
+let g:UltiSnipsExpandTrigger = "<C-J>"
+
 " Optional YouCompleteMe
 " Enabling YouCompleteMe will disable NeoComplCache
 " source ~/.vimycm/ycm.vim
