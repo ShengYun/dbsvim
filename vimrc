@@ -215,29 +215,6 @@ let g:ctrlp_custom_ignore = {
 " upon exiting Vim: >
 let g:ctrlp_clear_cache_on_exit = 0
 
-" Omnifun's auto complete
-filetype plugin indent on
-set completeopt=longest,menu
-set wildmenu
-
-" ccomplete will be override by omnicppcomplete later.
-set omnifunc=syntaxcomplete#Complete
-
-" omnicomplete's shortcut
-inoremap <leader>] <C-X><C-]>
-inoremap <leader>d <C-X><C-d>
-inoremap <leader>e <C-X><C-e>
-inoremap <leader>f <C-X><C-f>
-inoremap <leader>i <C-X><C-i>
-inoremap <leader>k <C-X><C-k>
-inoremap <leader>l <C-X><C-l>
-inoremap <leader>n <C-X><C-n>
-inoremap <leader>o <C-X><C-o>
-inoremap <leader>s <C-X><C-s>
-inoremap <leader>u <C-X><C-u>
-inoremap <leader>v <C-X><C-v>
-inoremap <leader>y <C-X><C-y>
-
 inoremap <expr> <C-d> pumvisible() ? "\<PageDown>\<C-p>\<C-n>" : "\<C-d>"
 inoremap <expr> <C-u> pumvisible() ? "\<PageUp>\<C-p>\<C-n>" : "\<C-u>"
 inoremap <expr> <C-f> pumvisible() ? "\<PageDown>\<C-p>\<C-n>" : "\<C-f>"
@@ -245,10 +222,6 @@ inoremap <expr> <C-b> pumvisible() ? "\<PageUp>\<C-p>\<C-n>" : "\<C-b>"
 inoremap <expr> <C-j> pumvisible() ? "\<C-n>" : "\<C-j>"
 inoremap <expr> <C-k> pumvisible() ? "\<C-p>" : "\<C-k>"
 
-
-
-" autocmd for omnicppcomplete
-autocmd BufNewFile,BufRead,BufEnter *.cpp,*.hpp,*.cc,*.c,*.h set omnifunc=omni#cpp#complete#Main
 
 " autocmd for vim-colors-solarized and vim-gitgutter
 " This line should be removed after https://github.com/altercation/vim-colors-solarized/pull/62
@@ -261,16 +234,6 @@ let g:gitgutter_realtime = 0
 
 nnoremap <leader>j :GitGutterNextHunk<cr>
 nnoremap <leader>k :GitGutterPrevHunk<cr>
-" OmniCpp config
-let OmniCpp_GlobalScopeSearch = 1  " 0 or 1
-let OmniCpp_NamespaceSearch = 1   " 0 ,  1 or 2
-let OmniCpp_DisplayMode = 1
-let OmniCpp_ShowScopeInAbbr = 0
-let OmniCpp_ShowPrototypeInAbbr = 1
-let OmniCpp_ShowAccess = 1
-let OmniCpp_MayCompleteDot = 1
-let OmniCpp_MayCompleteArrow = 1
-let OmniCpp_MayCompleteScope = 1
 
 " neocomplcache setup
 let g:neocomplcache_enable_at_startup = 1
