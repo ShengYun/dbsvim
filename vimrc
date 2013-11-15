@@ -277,6 +277,7 @@ let g:jedi#show_call_signatures = 1
 let g:pep8_map = "<leader>8"
 
 " Optional YouCompleteMe
+" Enabling YouCompleteMe will disable NeoComplCache
 " source ~/.vimycm/ycm.vim
 " source C:\Program Files\Vim\vimfiles\vimycm\ycm.vim
 
