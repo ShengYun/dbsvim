@@ -280,14 +280,33 @@ let g:pep8_map = "<leader>8"
 " UltiSnips config
 let g:UltiSnipsExpandTrigger = "<C-J>"
 
-" Uncomment to disable YouCompleteMe
-" This will disable YouCompleteMe even if YouCompleteMe is in the runtimepath
-" let g:loaded_youcompleteme = 1
+if has("win16") || has("win95") || has("win32") || has("win64")
+    let g:ycm_global_ycm_extra_conf = 'C:\Program Files\Vim\vimfiles\vimycm\ycm_extra_conf.py'
+    let g:ycm_confirm_extra_conf = 0
+else
+    let g:ycm_global_ycm_extra_conf = '~/.vimycm/ycm_extra_conf.py'
+endif
 
-" Optional YouCompleteMe (currently only working on MacOS/Linux)
-" Enabling YouCompleteMe will disable NeoComplCache
-" source ~/.vimycm/ycm.vim
-" source C:\Program Files\Vim\vimfiles\vimycm\ycm.vim
+" This is not working under Windows
+let g:ycm_collect_identifiers_from_tags_files = 1
+
+let g:ycm_seed_identifiers_with_syntax = 1
+let g:ycm_filetype_blacklist = {
+      \ 'tagbar' : 1,
+      \ 'qf' : 1,
+      \ 'notes' : 1,
+      \ 'markdown' : 1,
+      \ 'unite' : 1,
+      \ 'text' : 1,
+      \ 'vimwiki' : 1,
+      \ 'python' : 1,
+      \}
+
+" Uncomment 'let g:loaded_youcompleteme = 1' to disable YouCompleteMe
+" Note that 'let g:neocomplcache_enable_at_startup = 0'
+" is required to enable YouCompleteMe.
+let g:loaded_youcompleteme = 1
+" let g:neocomplcache_enable_at_startup = 0
 
 " guifont for linux
 " set guifont=Monospace\ 13
