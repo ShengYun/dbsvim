@@ -2,7 +2,7 @@
 
 This repo uses pathogen to manage my vim plugins
 
-If you want a manual install, see contents of either **update-linux-vim.sh**
+To manual install, see contents of either **update-mac-linux-vim.sh**
 or **update-windows-vim.bat**
 
 ## Install/Update
@@ -11,13 +11,15 @@ or **update-windows-vim.bat**
 3. git submodule update --init --recursive
 
 ### Linux/MacOSX
-- run update-linux-vim.sh
+- run update-mac-linux-vim.sh
 
 ### Windows
 - run update-windows-vim.bat
 
 ## Dependency
-If you are a windows user, you may find something useful in **cygwin\_commands\_for\_windows**
+If using Windows, stuff in **cygwin\_commands\_for\_windows** may be useful.
+
+To enable YouCompleteMe, first comment out *let g:loaded_youcompleteme = 1*, and uncomment *let g:neocomplcache_enable_at_startup = 0* below. Then follow the YouCompleteMe install intructions [here][1]. A handy script is in *ycm_build_mac_linux*.
 
 - ack
 - ag (the_silver_searcher)
@@ -28,3 +30,6 @@ If you are a windows user, you may find something useful in **cygwin\_commands\_
 - gnu global (gtags)
 - pep8(autopep8 is not required, but I believe you will love it:))
 - python 2.7+ (if you only have python 2.6, you should install the argparse module)
+- YouCompleteMe dependencies(optional)
+
+    [1]: https://github.com/Valloric/YouCompleteMe
