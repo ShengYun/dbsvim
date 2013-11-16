@@ -302,7 +302,11 @@ let g:ycm_filetype_blacklist = {
       \ 'python' : 1,
       \}
 
-" Uncomment 'let g:loaded_youcompleteme = 1' to disable YouCompleteMe
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Below is configurable options
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+" Uncomment 'let g:loaded_youcompleteme = 1' to enable YouCompleteMe
 " Note that 'let g:neocomplcache_enable_at_startup = 0'
 " is required to enable YouCompleteMe.
 let g:loaded_youcompleteme = 1
