@@ -6,3 +6,5 @@ cscope.files
 cscope.out
 nscope.out
 *.swp
+ycm_build_mac_linux
+!ycm_build_mac_linux/manual_build.sh
