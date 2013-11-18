@@ -2,7 +2,7 @@
 runtime bundle/vim-pathogen/autoload/pathogen.vim
 
 " Init pathogen.vim
-call pathogen#infect()
+execute pathogen#infect()
 
 set nocompatible
 
