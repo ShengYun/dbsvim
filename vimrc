@@ -305,6 +305,7 @@ let g:ycm_filetype_blacklist = {
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Below is configurable options
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+set completeopt-=preview
 
 " Uncomment 'let g:loaded_youcompleteme = 1' to enable YouCompleteMe
 " Note that 'let g:neocomplcache_enable_at_startup = 0'
