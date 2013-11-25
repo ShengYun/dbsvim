@@ -244,14 +244,14 @@ let g:neocomplcache_max_menu_width = 70
 nnoremap <C-\> :NeoComplCacheToggle<CR>
 
 " lock neocomplcache if writting python, jedi will take control 
-autocmd BufNewFile,BufRead,BufEnter *.py execute ':NeoComplCacheLock'
+autocmd FileType python execute ':NeoComplCacheLock'
 
 " set foldmethod to indent if editing a python file
-autocmd BufNewFile,BufRead,BufEnter *.py set foldmethod=indent
+autocmd FileType python set foldmethod=indent
 " set indents to 4 if editing a python file
-autocmd BufNewFile,BufRead,BufEnter *.py set tabstop=4
-autocmd BufNewFile,BufRead,BufEnter *.py set softtabstop=4
-autocmd BufNewFile,BufRead,BufEnter *.py set shiftwidth=4
+autocmd FileType python set tabstop=4
+autocmd FileType python set softtabstop=4
+autocmd FileType python set shiftwidth=4
 
 " setup vim-commentary for python files
 autocmd FileType python set commentstring=#\ %s
