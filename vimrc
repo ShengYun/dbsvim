@@ -273,6 +273,7 @@ let g:jedi#usages_command = "<leader>s"
 let g:jedi#use_tabs_not_buffers = 0
 let g:jedi#popup_on_dot = 1
 let g:jedi#show_call_signatures = 1
+autocmd FileType python setlocal completeopt-=preview
 
 " pep8 config
 let g:pep8_map = "<leader>8"
@@ -305,8 +306,6 @@ let g:ycm_filetype_blacklist = {
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Below is configurable options
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-set completeopt-=preview
-
 " Uncomment 'let g:loaded_youcompleteme = 1' to enable YouCompleteMe
 " Note that 'let g:neocomplcache_enable_at_startup = 0'
 " is required to enable YouCompleteMe.
