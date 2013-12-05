@@ -222,9 +222,6 @@ inoremap <expr> <C-d> pumvisible() ? "\<PageDown>\<C-p>\<C-n>" : "\<C-d>"
 inoremap <expr> <C-u> pumvisible() ? "\<PageUp>\<C-p>\<C-n>" : "\<C-u>"
 inoremap <expr> <C-f> pumvisible() ? "\<PageDown>\<C-p>\<C-n>" : "\<C-f>"
 inoremap <expr> <C-b> pumvisible() ? "\<PageUp>\<C-p>\<C-n>" : "\<C-b>"
-inoremap <expr> <C-j> pumvisible() ? "\<C-n>" : "\<C-j>"
-inoremap <expr> <C-k> pumvisible() ? "\<C-p>" : "\<C-k>"
-
 
 " autocmd for vim-colors-solarized and vim-gitgutter
 " This line should be removed after https://github.com/altercation/vim-colors-solarized/pull/62
@@ -302,6 +299,11 @@ let g:ycm_filetype_blacklist = {
       \ 'vimwiki' : 1,
       \ 'python' : 1,
       \}
+
+" YankRing Settings
+let yankring_replace_n_pkey = '<C-k>'
+let yankring_replace_n_nkey = '<C-j>'
+nnoremap <F11> :YRShow<CR>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Below is configurable options
