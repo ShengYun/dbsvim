@@ -289,16 +289,6 @@ endif
 let g:ycm_collect_identifiers_from_tags_files = 1
 
 let g:ycm_seed_identifiers_with_syntax = 1
-let g:ycm_filetype_blacklist = {
-      \ 'tagbar' : 1,
-      \ 'qf' : 1,
-      \ 'notes' : 1,
-      \ 'markdown' : 1,
-      \ 'unite' : 1,
-      \ 'text' : 1,
-      \ 'vimwiki' : 1,
-      \ 'python' : 1,
-      \}
 
 " YankRing Settings
 let yankring_replace_n_pkey = '<C-k>'
@@ -311,8 +301,17 @@ nnoremap <F11> :YRShow<CR>
 " Uncomment 'let g:loaded_youcompleteme = 1' to enable YouCompleteMe
 " Note that 'let g:neocomplcache_enable_at_startup = 0'
 " is required to enable YouCompleteMe.
-let g:loaded_youcompleteme = 1
-" let g:neocomplcache_enable_at_startup = 0
+" Also g:jedi#completions_enabled should be set to 0 when using YouCompleteMe
+
+" let g:loaded_youcompleteme = 1
+
+if g:loaded_youcompleteme = 1
+    let g:jedi#completions_enabled = 0
+    let g:neocomplcache_enable_at_startup = 0
+else
+    let g:jedi#completions_enabled = 1
+    let g:neocomplcache_enable_at_startup = 1
+endif
 
 " guifont for linux
 " set guifont=Monospace\ 13
