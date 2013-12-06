@@ -298,20 +298,16 @@ nnoremap <F11> :YRShow<CR>
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Below is configurable options
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" 'let g:loaded_youcompleteme = 0' to enable YouCompleteMe
-" Note that 'let g:neocomplcache_enable_at_startup = 0'
-" is required to enable YouCompleteMe.
-" Also g:jedi#completions_enabled should be set to 0 when using YouCompleteMe
+
+" To enable YouCompleteMe
+" 1) Comment let g:loaded_youcompleteme = 1
+" 2) Uncomment let g:jedi#completions_enabled = 0
+" 3) Uncomment g:neocomplcache_enable_at_startup = 0
 
 let g:loaded_youcompleteme = 1
+" let g:jedi#completions_enabled = 0
+" let g:neocomplcache_enable_at_startup = 0
 
-if g:loaded_youcompleteme == 1
-    let g:jedi#completions_enabled = 0
-    let g:neocomplcache_enable_at_startup = 0
-else
-    let g:jedi#completions_enabled = 1
-    let g:neocomplcache_enable_at_startup = 1
-endif
 
 " guifont for linux
 " set guifont=Monospace\ 13
