@@ -276,7 +276,9 @@ autocmd FileType python setlocal completeopt-=preview
 let g:pep8_map = "<leader>8"
 
 " UltiSnips config
-let g:UltiSnipsExpandTrigger = "<C-J>"
+let g:UltiSnipsExpandTrigger = "<c-j>"
+let g:UltiSnipsJumpForwardTrigger = "<tab>"
+let g:UltiSnipsJumpBackwardTrigger = "<s-tab>"
 
 if has("win16") || has("win95") || has("win32") || has("win64")
     let g:ycm_global_ycm_extra_conf = 'C:\Program Files\Vim\vimfiles\vimycm\ycm_extra_conf.py'
