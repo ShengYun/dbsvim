@@ -293,9 +293,11 @@ let g:ycm_collect_identifiers_from_tags_files = 1
 let g:ycm_seed_identifiers_with_syntax = 1
 
 " YankRing Settings
-let yankring_replace_n_pkey = '<C-k>'
-let yankring_replace_n_nkey = '<C-j>'
 nnoremap <F11> :YRShow<CR>
+
+" vim-multiple-cursors settings 
+let g:multi_cursor_next_key='<C-j>'
+let g:multi_cursor_prev_key='<C-k>'
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Below is configurable options
