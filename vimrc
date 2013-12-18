@@ -272,6 +272,9 @@ let g:jedi#popup_on_dot = 1
 let g:jedi#show_call_signatures = 1
 autocmd FileType python setlocal completeopt-=preview
 
+" Don't know why this does not work with jedi-vim
+set completeopt-=preview
+
 " pep8 config
 let g:pep8_map = "<leader>8"
 
