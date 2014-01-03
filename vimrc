@@ -78,6 +78,9 @@ set relativenumber
 syntax enable
 syntax on
 
+" Set encoding to utf-8
+set encoding=utf-8
+
 " Tab and indent settings
 set autoindent
 set cindent
