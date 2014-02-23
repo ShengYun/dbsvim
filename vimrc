@@ -211,7 +211,8 @@ let g:ctrlp_max_height = 70
 let g:ctrlp_custom_ignore = {
     \ 'dir':  '\.git$\|\.hg$\|\.svn$',
     \ 'file': '\.exe$\|\.so$\|\.dll$\|\.elf$\|\.o$\
-               \|\.obj$\
+               \|\.obj$\|\.class$\
+               \|\.png$\|\.jpg$\|\.jpeg$\|\.bmp$\
                \|\.vsd$\|\.vsdx$\|\.doc$\|\.docx$\
                \|\.xls$\|\.xlsx$',
     \ 'link': '',
