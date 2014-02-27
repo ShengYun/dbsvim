@@ -263,6 +263,7 @@ let &grepprg = 'grep --line-number --with-filename'
 
 " Ack setup from Steve Losh
 nnoremap <leader>a :Ack!<space>
+nnoremap <leader><leader>a :Ack! <C-R><C-W>
 let g:ackprg = 'ag --smart-case --nogroup --nocolor --column'
 
 " Vim-LaTex setup
