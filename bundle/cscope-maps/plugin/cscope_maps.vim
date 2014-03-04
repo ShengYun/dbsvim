@@ -134,14 +134,14 @@ if has("cscope")
     " (Note: you may wish to put a 'set splitright' in your .vimrc
     " if you prefer the new window on the right instead of the left
 
-    nnoremap <leader><leader>s :vert scs find s <C-R>=expand("<cword>")<CR><CR>
-    nnoremap <leader><leader>g :vert scs find g <C-R>=expand("<cword>")<CR><CR>
-    nnoremap <leader><leader>c :vert scs find c <C-R>=expand("<cword>")<CR><CR>
-    nnoremap <leader><leader>t :vert scs find t <C-R>=expand("<cword>")<CR><CR>
-    nnoremap <leader><leader>e :vert scs find e <C-R>=expand("<cword>")<CR><CR>
-    nnoremap <leader><leader>f :vert scs find f <C-R>=expand("<cfile>")<CR><CR>
-    nnoremap <leader><leader>i :vert scs find i ^<C-R>=expand("<cfile>")<CR>$<CR>
-    nnoremap <leader><leader>d :vert scs find d <C-R>=expand("<cword>")<CR><CR>
+    nnoremap <leader>vs :vert scs find s <C-R>=expand("<cword>")<CR><CR>
+    nnoremap <leader>vg :vert scs find g <C-R>=expand("<cword>")<CR><CR>
+    nnoremap <leader>vc :vert scs find c <C-R>=expand("<cword>")<CR><CR>
+    nnoremap <leader>vt :vert scs find t <C-R>=expand("<cword>")<CR><CR>
+    nnoremap <leader>ve :vert scs find e <C-R>=expand("<cword>")<CR><CR>
+    nnoremap <leader>vf :vert scs find f <C-R>=expand("<cfile>")<CR><CR>
+    nnoremap <leader>vi :vert scs find i ^<C-R>=expand("<cfile>")<CR>$<CR>
+    nnoremap <leader>vd :vert scs find d <C-R>=expand("<cword>")<CR><CR>
 
 
     """"""""""""" key map timeouts
