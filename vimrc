@@ -302,6 +302,9 @@ let yankring_replace_n_pkey = '<C-k>'
 let yankring_replace_n_nkey = '<C-j>' 
 nnoremap <F11> :YRShow<CR>
 
+" Syntastic settings
+let g:syntastic_python_checkers = ['python', 'pep8']
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Below is configurable options
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
