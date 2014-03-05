@@ -280,9 +280,6 @@ autocmd FileType python setlocal completeopt-=preview
 " Don't know why this does not work with jedi-vim
 set completeopt-=preview
 
-" pep8 config
-let g:pep8_map = "<leader>8"
-
 " UltiSnips config
 let g:UltiSnipsExpandTrigger = "<c-j>"
 let g:UltiSnipsJumpForwardTrigger = "<tab>"
