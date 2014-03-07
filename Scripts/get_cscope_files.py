@@ -2,6 +2,13 @@ import os
 import sys
 import re
 
+folder_exclude_pattern = set([
+    '.svn',
+    '.hg',
+    '.git',
+    '.cvs',
+    ])
+
 if __name__ == '__main__':
 
     if len(sys.argv) == 2:
@@ -12,7 +19,8 @@ if __name__ == '__main__':
     file_count = 1
     cscope_files = open('cscope.files', 'w')
 
-    for (path, dirs, files) in os.walk(curdir):
+    for (path, dirs, files) in os.walk(curdir, topdown=True):
+        dirs[:] = [d for d in dirs if d not in folder_exclude_pattern]
         for f in files:
             if re.match('.*\.(c|cpp|cc|h|hpp|java)$', f):
                 output = "\"" + os.path.join(path, f) + "\""
