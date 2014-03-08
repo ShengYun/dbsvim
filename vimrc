@@ -304,6 +304,8 @@ nnoremap <F11> :YRShow<CR>
 
 " Syntastic settings
 let g:syntastic_python_checkers = ['python', 'pep8']
+let g:syntastic_c_checkers = ['gcc', 'cppcheck']
+let g:syntastic_cpp_checkers = ['gcc', 'cppcheck']
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Below is configurable options
@@ -318,6 +320,16 @@ let g:loaded_youcompleteme = 1
 " let g:jedi#completions_enabled = 0
 " let g:neocomplcache_enable_at_startup = 0
 
+" Eclim with YouCompleteMe
+" let g:EclimCompletionMethod = 'omnifunc'
+
+" Eclim with neocomplcache
+" let g:EclimCompletionMethod = 'omnifunc'
+
+" if !exists('g:neocomplcache_force_omni_patterns')
+"   let g:neocomplcache_force_omni_patterns = {}
+" endif
+" let g:neocomplcache_force_omni_patterns.java = '\k\.\k*'
 
 " guifont for linux
 " set guifont=Monospace\ 13
