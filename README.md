@@ -17,7 +17,7 @@ or **update-windows-vim.bat**
 - run update-windows-vim.bat
 
 ## Dependency
-If using Windows, stuff in **cygwin\_commands\_for\_windows** may be useful.
+If using Windows, stuff in **windows\_utility** may be useful.
 
 To enable YouCompleteMe, first comment out *let g:loaded_youcompleteme = 1*, and uncomment *let g:neocomplcache_enable_at_startup = 0* below. Then follow the YouCompleteMe install intructions [here][1]. A handy script is in *ycm_build_mac_linux*.
 
@@ -28,8 +28,9 @@ To enable YouCompleteMe, first comment out *let g:loaded_youcompleteme = 1*, and
 - dejavu fonts
 - git
 - gnu global (gtags)
-- pep8(autopep8 is not required, but I believe you will love it:))
+- whatever static checker you are using and supported by syntastic
 - python 2.7+ (if you only have python 2.6, you should install the argparse module)
 - YouCompleteMe dependencies(optional)
+- Eclim(optional)
 
     [1]: https://github.com/Valloric/YouCompleteMe
