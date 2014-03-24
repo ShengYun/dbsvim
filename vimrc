@@ -9,7 +9,6 @@ set nocompatible
 " Below is customized settings
 let mapleader = ","
 inoremap jk <Esc>
-inoremap <C-C> <Nop>
 
 " Allow colors in commandline mode
 if !has("gui_running")
