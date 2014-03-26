@@ -25,7 +25,7 @@ else
     " colorscheme dbs
     
     set background=dark
-    colorscheme jellybeans
+    colorscheme lucius
 endif
 
 " Remove menu bar and tool bar
