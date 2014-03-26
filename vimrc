@@ -9,6 +9,8 @@ set nocompatible
 " Below is customized settings
 let mapleader = ","
 inoremap jk <Esc>
+nnoremap j gj
+nnoremap k gk
 
 " Allow colors in commandline mode
 if !has("gui_running")
@@ -27,11 +29,7 @@ else
 endif
 
 " Remove menu bar and tool bar
-set guioptions-=T
-set guioptions-=m
-set guioptions-=r
-set guioptions-=b
-set guioptions-=L
+set guioptions=
 
 " Always show statusline
 set laststatus=2
@@ -58,8 +56,9 @@ let g:fencview_autodetect = 0
 cd %:p:h
 set noautochdir
 
-" Backup setting
+" disable backup and swap files
 set nobackup
+set noswapfile
 
 " Ignore case sensitive
 set ignorecase
@@ -72,6 +71,12 @@ set incsearch
 
 " Show relative line numbers
 set relativenumber
+
+" Show line numbers
+set number
+
+" Set smart case
+set smartcase
 
 " Syntax highlight setting
 syntax enable
