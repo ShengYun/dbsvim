@@ -25,7 +25,7 @@ else
     " colorscheme dbs
     
     set background=dark
-    colorscheme molokai
+    colorscheme solarized
 endif
 
 " Remove menu bar and tool bar
