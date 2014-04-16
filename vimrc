@@ -65,6 +65,7 @@ set ignorecase
 
 " Set highlight search result
 set hlsearch
+nnoremap <Space> :noh<CR>
 
 " Set search
 set incsearch
