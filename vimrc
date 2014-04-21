@@ -314,6 +314,9 @@ let g:syntastic_python_checkers = ['python', 'pep8']
 let g:syntastic_c_checkers = ['gcc', 'cppcheck']
 let g:syntastic_cpp_checkers = ['gcc', 'cppcheck']
 
+" Fuzzyfinder
+nnoremap <leader>r :FufTag<CR>
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Below is configurable options
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
