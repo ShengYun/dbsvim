@@ -349,13 +349,16 @@ let g:loaded_youcompleteme = 1
 
 " guifont for linux
 " set guifont=Monospace\ 13
+" set guifont=Inconsolata:h15
 " set guifont=DejavuSansMono\ 13
 
 " guifont for mac
 " set guifont=Monaco:h14
+" set guifont=Inconsolata:h15
 " set guifont=DejaVu\ Sans\ Mono:h20
 
 " guifont for windows
 " set guifont=Fixedsys:h12
-" set guifont=Consolas:h14
+" set guifont=Consolas:h15
+" set guifont=Inconsolata:h15
 " set guifont=DejaVu\ Sans\ Mono:h13
