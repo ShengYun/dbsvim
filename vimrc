@@ -267,11 +267,14 @@ let &grepprg = 'grep --line-number --with-filename'
 " set grepprg=grep\ -nH\ $*
 
 " Ack setup from Steve Losh
-nnoremap <leader>a :Ack!<space>
+" nnoremap <leader>a :Ack!<space>
 " In default, Ack will expand the word under cursor if nothing is provided.
 " So the following line is redundant
 " nnoremap <leader><leader>a :Ack! <C-R><C-W>
 let g:ackprg = 'ag --smart-case --nogroup --nocolor --column'
+
+" Use ag with vim-dispatch
+nnoremap <leader>a :Dispatch ag --smart-case --nogroup --nocolor --column <C-R><C-W>
 
 " Vim-LaTex setup
 " set shellslash
