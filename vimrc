@@ -20,13 +20,14 @@ if !has("gui_running")
 else
     set t_Co=16
     " Color setting for GUI
-    
-    " set background=dark
-    " colorscheme dbs
-    
     set background=dark
     colorscheme solarized
 endif
+
+" molokai colorscheme setup
+" If you prefer the scheme to match the original monokai background color,
+" put this in your .vimrc file:
+let g:molokai_original = 1
 
 " Remove menu bar and tool bar
 set guioptions=
@@ -261,6 +262,8 @@ autocmd FileType python set shiftwidth=4
 
 " setup vim-commentary for python files
 autocmd FileType python set commentstring=#\ %s
+autocmd FileType c set commentstring=//\ %s
+autocmd FileType cpp set commentstring=//\ %s
 
 " AsyncCommand and Vim-LaTeX setup
 let &grepprg = 'grep --line-number --with-filename'
