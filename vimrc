@@ -321,7 +321,7 @@ let g:syntastic_c_checkers = ['gcc', 'cppcheck']
 let g:syntastic_cpp_checkers = ['gcc', 'cppcheck']
 
 " Fuzzyfinder
-nnoremap <leader>r :FufTag<CR>
+nnoremap <leader>u :FufTag<CR>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Below is configurable options
