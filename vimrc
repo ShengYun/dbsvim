@@ -273,6 +273,7 @@ let &grepprg = 'grep --line-number --with-filename'
 " In default, Ack will expand the word under cursor if nothing is provided.
 nnoremap <leader>a :Ack!<space>
 let g:ackprg = 'ag --smart-case --nogroup --nocolor --column'
+let g:ack_use_dispatch = 1
 
 " Vim-LaTex setup
 " set shellslash
