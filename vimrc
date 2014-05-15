@@ -184,6 +184,10 @@ nnoremap <F2> :%s/\s\+$//g <CR>
 " Bufexplorer
 noremap <C-Tab> :BufExplorer<CR>
 
+" Map <Leader>- and <Leader>= to :colder and :cnewer
+nnoremap <Leader>- :colder<CR>
+nnoremap <Leader>= :cnewer<CR>
+
 " CtrlP config
 
 " Set this to 1 to set searching by filename (as opposed to full path) as the
