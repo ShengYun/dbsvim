@@ -38,7 +38,7 @@ function python_finder {
   echo "${python_library} ${python_include}"
 }
 
-ycm_dir="~/.vim/bundle/YouCompleteMe/cpp"
+ycm_dir="~/.vim/bundle/YouCompleteMe/third_party/ycmd/cpp"
 llvm_root="~/libs/clang+llvm-3.3"
 
 cmake -G "Unix Makefiles" $(python_finder) -DPATH_TO_LLVM_ROOT=$llvm_root . $ycm_dir
