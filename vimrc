@@ -323,9 +323,12 @@ let g:syntastic_cpp_checkers = ['gcc', 'cppcheck']
 " Fuzzyfinder
 nnoremap <leader>u :FufTag<CR>
 
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Below is configurable options
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" rainbow-parentheses
+nnoremap <Leader>r :RainbowParenthesesToggle<CR>
+autocmd Syntax * RainbowParenthesesLoadRound    " ()
+" autocmd Syntax * RainbowParenthesesLoadSquare   " []
+" autocmd Syntax * RainbowParenthesesLoadBraces   " {}
+" autocmd Syntax * RainbowParenthesesLoadChevrons " <>
 
 " To enable YouCompleteMe
 " 1) Comment let g:loaded_youcompleteme = 1
