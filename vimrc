@@ -324,7 +324,7 @@ let g:syntastic_cpp_checkers = ['gcc', 'cppcheck']
 nnoremap <leader>u :FufTag<CR>
 
 " rainbow-parentheses
-nnoremap <Leader>r :RainbowParenthesesToggle<CR>
+nnoremap <Leader>` :RainbowParenthesesToggle<CR>
 autocmd Syntax * RainbowParenthesesLoadRound    " ()
 " autocmd Syntax * RainbowParenthesesLoadSquare   " []
 " autocmd Syntax * RainbowParenthesesLoadBraces   " {}
