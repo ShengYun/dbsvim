@@ -315,6 +315,9 @@ let yankring_replace_n_pkey = '<C-k>'
 let yankring_replace_n_nkey = '<C-j>' 
 nnoremap <F11> :YRShow<CR>
 
+" If g:yankring_max_element_length is set to 0, there is no limit.
+let g:yankring_max_element_length = 0
+
 " Syntastic settings
 let g:syntastic_python_checkers = ['python', 'pep8']
 let g:syntastic_c_checkers = ['gcc', 'cppcheck']
