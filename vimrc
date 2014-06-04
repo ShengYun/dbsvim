@@ -77,9 +77,6 @@ set relativenumber
 " Show line numbers
 set number
 
-" Set smart case
-set smartcase
-
 " Syntax highlight setting
 syntax enable
 syntax on
