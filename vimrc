@@ -332,6 +332,8 @@ autocmd Syntax * RainbowParenthesesLoadRound    " ()
 " autocmd Syntax * RainbowParenthesesLoadBraces   " {}
 " autocmd Syntax * RainbowParenthesesLoadChevrons " <>
 
+nnoremap <Leader>1 :on<CR>
+
 " To enable YouCompleteMe
 " 1) Comment let g:loaded_youcompleteme = 1
 " 2) Uncomment let g:jedi#completions_enabled = 0
