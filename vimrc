@@ -22,6 +22,8 @@ else
     " Color setting for GUI
     set background=dark
     colorscheme solarized
+    " colorscheme lucius
+    " colorscheme molokai
 endif
 
 " molokai colorscheme setup
