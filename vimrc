@@ -333,6 +333,8 @@ autocmd Syntax * RainbowParenthesesLoadRound    " ()
 " autocmd Syntax * RainbowParenthesesLoadChevrons " <>
 
 nnoremap <Leader>1 :on<CR>
+" nnoremap <Leader>2 :call DBSOpenTerminal(['cmd'])<CR>
+" nnoremap <Leader>3 :call DBSOpenTerminal(['sh', '--login', '-i'])<CR>
 
 " To enable YouCompleteMe
 " 1) Comment let g:loaded_youcompleteme = 1
