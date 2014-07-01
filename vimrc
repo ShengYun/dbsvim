@@ -332,7 +332,13 @@ autocmd Syntax * RainbowParenthesesLoadRound    " ()
 " autocmd Syntax * RainbowParenthesesLoadBraces   " {}
 " autocmd Syntax * RainbowParenthesesLoadChevrons " <>
 
+" Manage split screens
 nnoremap <Leader>1 :on<CR>
+set winminheight=0
+set winminwidth=0
+nnoremap <Leader>z <C-W>\|<C-W>_
+
+" <Leader>0 to <Leader>9 is reserved for other usages:)
 " nnoremap <Leader>2 :call DBSOpenTerminal(['cmd'])<CR>
 " nnoremap <Leader>3 :call DBSOpenTerminal(['sh', '--login', '-i'])<CR>
 
