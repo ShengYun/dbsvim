@@ -21,10 +21,7 @@ else
     set t_Co=16
     " Color setting for GUI
     set background=dark
-    " set background=light
-    " colorscheme solarized
-    " colorscheme lucius
-    colorscheme molokai
+    colorscheme solarized
 endif
 
 " molokai colorscheme setup
