@@ -21,9 +21,10 @@ else
     set t_Co=16
     " Color setting for GUI
     set background=dark
-    colorscheme solarized
+    " set background=light
+    " colorscheme solarized
     " colorscheme lucius
-    " colorscheme molokai
+    colorscheme molokai
 endif
 
 " molokai colorscheme setup
@@ -336,6 +337,8 @@ autocmd Syntax * RainbowParenthesesLoadRound    " ()
 nnoremap <Leader>1 :on<CR>
 set winminheight=0
 set winminwidth=0
+set splitbelow
+set splitright
 nnoremap <Leader>z <C-W>\|<C-W>_
 
 " <Leader>0 to <Leader>9 is reserved for other usages:)
