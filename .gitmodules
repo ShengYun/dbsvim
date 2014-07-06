@@ -118,3 +118,6 @@
 [submodule "bundle/vim-blackboard"]
 	path = bundle/vim-blackboard
 	url = https://github.com/rickharris/vim-blackboard.git
+[submodule "bundle/vim-colorscheme-dbs-easycolour"]
+	path = bundle/vim-colorscheme-dbs-easycolour
+	url = https://github.com/ShengYun/vim-colorscheme-dbs-easycolour.git
