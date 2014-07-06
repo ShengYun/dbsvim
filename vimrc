@@ -21,7 +21,7 @@ else
     set t_Co=16
     " Color setting for GUI
     set background=dark
-    colorscheme desert
+    colorscheme dbs
 endif
 
 " molokai colorscheme setup
