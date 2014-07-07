@@ -121,3 +121,6 @@
 [submodule "bundle/vim-dbs-easycolour"]
 	path = bundle/vim-dbs-easycolour
 	url = https://github.com/ShengYun/vim-dbs-easycolour.git
+[submodule "bundle/dbs-terminal"]
+	path = bundle/dbs-terminal
+	url = https://github.com/ShengYun/dbs-terminal.git

@@ -339,6 +339,7 @@ set splitright
 nnoremap <Leader>z <C-W>\|<C-W>_
 
 " <Leader>0 to <Leader>9 is reserved for other usages:)
+" nnoremap <Leader>2 :call DBSOpenTerminal(['iTerm.sh'])<CR>
 " nnoremap <Leader>2 :call DBSOpenTerminal(['cmd'])<CR>
 " nnoremap <Leader>3 :call DBSOpenTerminal(['sh', '--login', '-i'])<CR>
 
