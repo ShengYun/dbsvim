@@ -12,7 +12,9 @@ inoremap jk <Esc>
 nnoremap j gj
 nnoremap k gk
 nnoremap <Leader>; :
+nnoremap : <Nop>
 nnoremap <Leader>/ ?
+nnoremap ? <Nop>
 
 " Allow colors in commandline mode
 if !has("gui_running")
