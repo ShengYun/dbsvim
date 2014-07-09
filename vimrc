@@ -11,6 +11,8 @@ let mapleader = ","
 inoremap jk <Esc>
 nnoremap j gj
 nnoremap k gk
+nnoremap <Leader>; :
+nnoremap <Leader>/ ?
 
 " Allow colors in commandline mode
 if !has("gui_running")
