@@ -11,7 +11,7 @@ let mapleader = ","
 inoremap jk <Esc>
 nnoremap j gj
 nnoremap k gk
-nnoremap <Leader>; :
+nnoremap <Leader>l :
 nnoremap : <Nop>
 nnoremap <Leader>/ ?
 nnoremap ? <Nop>
