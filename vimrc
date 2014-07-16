@@ -263,8 +263,9 @@ autocmd FileType python set tabstop=4
 autocmd FileType python set softtabstop=4
 autocmd FileType python set shiftwidth=4
 
-" setup vim-commentary for python files
+" setup vim-commentary for special files
 autocmd FileType python set commentstring=#\ %s
+autocmd FileType kivy set commentstring=#\ %s
 autocmd FileType c set commentstring=//\ %s
 autocmd FileType cpp set commentstring=//\ %s
 
