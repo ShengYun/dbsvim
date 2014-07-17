@@ -124,3 +124,6 @@
 [submodule "bundle/dbs-terminal"]
 	path = bundle/dbs-terminal
 	url = https://github.com/ShengYun/dbs-terminal.git
+[submodule "bundle/vim-yankstack"]
+	path = bundle/vim-yankstack
+	url = https://github.com/maxbrunsfeld/vim-yankstack.git

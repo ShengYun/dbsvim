@@ -310,13 +310,11 @@ let g:ycm_collect_identifiers_from_tags_files = 1
 
 let g:ycm_seed_identifiers_with_syntax = 1
 
-" YankRing Settings
-let yankring_replace_n_pkey = '<C-k>'
-let yankring_replace_n_nkey = '<C-j>' 
-nnoremap <F11> :YRShow<CR>
-
-" If g:yankring_max_element_length is set to 0, there is no limit.
-let g:yankring_max_element_length = 0
+" YankStack Settings
+let g:yankstack_map_keys = 0
+nmap <Leader>p <Plug>yankstack_substitute_older_paste
+nmap <Leader>P <Plug>yankstack_substitute_newer_paste
+nnoremap <F11> :Yanks<CR>
 
 " Syntastic settings
 let g:syntastic_python_checkers = ['python', 'pep8']
