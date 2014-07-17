@@ -279,6 +279,9 @@ nnoremap <leader>a :Ack!<space>
 let g:ackprg = 'ag --smart-case --nogroup --nocolor --column'
 let g:ack_use_dispatch = 1
 
+" fugitive Ggrep
+nnoremap <Leader>q :Ggrep <C-R><C-W>
+
 " Vim-LaTex setup
 " set shellslash
 let g:tex_flavor='latex'
