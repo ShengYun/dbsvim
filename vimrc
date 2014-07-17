@@ -323,6 +323,7 @@ let g:syntastic_cpp_checkers = ['gcc', 'cppcheck']
 
 " Fuzzyfinder
 nnoremap <leader>u :FufTag<CR>
+nnoremap <C-[> :FufFile**\<CR>
 
 " rainbow-parentheses
 nnoremap <Leader>` :RainbowParenthesesToggle<CR>
