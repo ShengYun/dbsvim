@@ -23,7 +23,7 @@ else
     set t_Co=16
     " Color setting for GUI
     set background=dark
-    colorscheme dbs
+    colorscheme solarized
 endif
 
 " molokai colorscheme setup
