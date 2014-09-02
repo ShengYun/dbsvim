@@ -14,17 +14,10 @@ nnoremap k gk
 nnoremap <Leader>l :
 nnoremap : <Nop>
 
-" Allow colors in commandline mode
-if !has("gui_running")
-    set t_Co=16
-    " Color setting for terminal
-    colorscheme default
-else
-    set t_Co=16
-    " Color setting for GUI
-    set background=dark
-    colorscheme torte
-endif
+" Colorscheme settings
+set t_Co=16
+set background=dark
+colorscheme torte
 
 " molokai colorscheme setup
 " If you prefer the scheme to match the original monokai background color,
