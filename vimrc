@@ -23,8 +23,10 @@ set background=dark
 colorscheme torte
 
 " Alter torte's Pmenu and PmenuSel color
-autocmd ColorScheme torte highlight Pmenu ctermbg=black guibg=black
+autocmd ColorScheme torte highlight Pmenu ctermbg=grey guibg=grey
+autocmd ColorScheme torte highlight Pmenu ctermfg=black guifg=black
 autocmd ColorScheme torte highlight PmenuSel ctermbg=red guibg=red
+autocmd ColorScheme torte highlight PmenuSel ctermfg=black guifg=black
 
 " molokai colorscheme setup
 " If you prefer the scheme to match the original monokai background color,
