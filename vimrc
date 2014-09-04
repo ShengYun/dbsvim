@@ -14,10 +14,17 @@ nnoremap k gk
 nnoremap <Leader>l :
 nnoremap : <Nop>
 
-" Colorscheme settings
-set t_Co=16
+" Better indentation
+vnoremap < <gv
+vnoremap > >gv
+
+set t_Co=256
 set background=dark
 colorscheme torte
+
+" Alter torte's Pmenu and PmenuSel color
+autocmd ColorScheme torte highlight Pmenu ctermbg=black guibg=black
+autocmd ColorScheme torte highlight PmenuSel ctermbg=red guibg=red
 
 " molokai colorscheme setup
 " If you prefer the scheme to match the original monokai background color,
@@ -251,6 +258,7 @@ autocmd FileType python execute ':NeoComplCacheLock'
 
 " set foldmethod to indent if editing a python file
 autocmd FileType python set foldmethod=indent
+autocmd BufRead * normal zR
 " set indents to 4 if editing a python file
 autocmd FileType python set tabstop=4
 autocmd FileType python set softtabstop=4
