@@ -357,9 +357,14 @@ nnoremap <Leader>z <C-W>\|<C-W>_
 " 2) Uncomment let g:jedi#completions_enabled = 0
 " 3) Uncomment g:neocomplcache_enable_at_startup = 0
 
-let g:loaded_youcompleteme = 1
-" let g:jedi#completions_enabled = 0
-" let g:neocomplcache_enable_at_startup = 0
+" let g:loaded_youcompleteme = 1
+let g:jedi#completions_enabled = 0
+let g:neocomplcache_enable_at_startup = 0
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"                               Eclim Settings                               "
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
 
 " Eclim with YouCompleteMe
 " let g:EclimCompletionMethod = 'omnifunc'
@@ -371,6 +376,12 @@ let g:loaded_youcompleteme = 1
 "   let g:neocomplcache_force_omni_patterns = {}
 " endif
 " let g:neocomplcache_force_omni_patterns.java = '\k\.\k*'
+
+" Eclim java settings
+" autocmd FileType java nnoremap <silent> <buffer> <Leader>i :JavaImport<cr>
+" autocmd FileType java nnoremap <silent> <buffer> <Leader>d :JavaDocSearch -x declarations<cr>
+" autocmd FileType java nnoremap <silent> <buffer> <cr> :JavaSearchContext<cr>
+" autocmd FileType java nnoremap <silent> <buffer> K :JavaDocPreview<cr>
 
 " guifont for linux
 " set guifont=Monospace\ 13
