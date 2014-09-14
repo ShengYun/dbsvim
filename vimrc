@@ -288,7 +288,7 @@ let g:ycm_seed_identifiers_with_syntax = 1
 " YankStack Settings
 let g:yankstack_map_keys = 0
 nmap <Leader>p <Plug>yankstack_substitute_older_paste
-nmap <Leader>P <Plug>yankstack_substitute_newer_paste
+nmap <Leader>o <Plug>yankstack_substitute_newer_paste
 nnoremap <F11> :Yanks<CR>
 
 " Syntastic settings
