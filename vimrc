@@ -29,6 +29,9 @@ autocmd ColorScheme torte highlight PmenuSel ctermbg=red guibg=red
 autocmd ColorScheme torte highlight PmenuSel ctermfg=black guifg=black
 autocmd ColorScheme torte highlight ModeMsg ctermfg=yellow guifg=yellow
 
+set colorcolumn=80
+set cmdheight=2
+
 " molokai colorscheme setup
 " If you prefer the scheme to match the original monokai background color,
 " put this in your .vimrc file:
@@ -132,47 +135,11 @@ nnoremap <F4> :TagbarToggle<CR>
 " Use leader F4 to call Nerdtree
 nnoremap <leader><F4> :NERDTreeToggle<CR>
 
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" If you are using windows:
-" At least you need linux's find, echo, grep, ctags, cscope
-" You can find them in either cygwin or msys
-"
-" Take a look at cygwin_commands_for_windows.7z
-"
-" rename find to gfind and put it in your PATH
-" rename echo to gecho and put it in your PATH
-" put grep in your PATH
-"
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Don't add other types because cscope only works with
-" C, C++, and java
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-if has("win16") || has("win95") || has("win32") || has("win64")
-    nnoremap <leader><F11>
-                \ :AsyncCommand gfind . -iname '*.c' -exec gecho "\"{}\"" ';'
-                \ -o -iname '*.cpp' -exec gecho "\"{}\"" ';'
-                \ -o -iname '*.cc' -exec gecho "\"{}\"" ';'
-                \ -o -iname '*.h' -exec gecho "\"{}\"" ';'
-                \ -o -iname '*.hpp' -exec gecho "\"{}\"" ';'
-                \ -o -iname '*.java' -exec gecho "\"{}\"" ';' > cscope.files <CR>
-else
-    nnoremap <leader><F11>
-                \ :AsyncCommand find . -iname '*.c' -exec echo "\"{}\"" ';'
-                \ -o -iname '*.cpp' -exec echo "\"{}\"" ';'
-                \ -o -iname '*.cc' -exec echo "\"{}\"" ';'
-                \ -o -iname '*.h' -exec echo "\"{}\"" ';'
-                \ -o -iname '*.hpp' -exec echo "\"{}\"" ';'
-                \ -o -iname '*.java' -exec echo "\"{}\"" ';' > cscope.files <CR>
-endif
-
 " This is for quickly updating cscope file without using GNU find
 nnoremap <leader><F5> :cs kill -1<CR>
     \:!cscope -bqv<CR>
     \:cs add cscope.out<CR>
     \:cs reset<CR>
-
-" Refresh ctags with <leader><F12>
-nnoremap <leader><F12> :AsyncCommand ctags -R<cr>
 
 " Automatically update Gtags or not
 let g:Gtags_Auto_Update = 0
@@ -273,9 +240,7 @@ autocmd FileType kivy set commentstring=#\ %s
 autocmd FileType c set commentstring=//\ %s
 autocmd FileType cpp set commentstring=//\ %s
 
-" AsyncCommand and Vim-LaTeX setup
 let &grepprg = 'grep --line-number --with-filename'
-" set grepprg=grep\ -nH\ $*
 
 " Ack setup from Steve Losh
 " In default, Ack will expand the word under cursor if nothing is provided.
