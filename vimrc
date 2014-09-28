@@ -150,6 +150,9 @@ let g:Gtags_Auto_Update = 0
 " Map <C-]> with :tjump
 nnoremap <C-]> :tjump <C-R>=expand("<cword>")<CR><CR>
 
+" Map <c-space> with <c-x><c-o>
+inoremap <c-space> <c-x><c-o>
+
 " Delete spaces after each line
 nnoremap <F2> :%s/\s\+$//g <CR>
 
@@ -350,6 +353,10 @@ let g:neocomplcache_enable_at_startup = 0
 " autocmd FileType java nnoremap <silent> <buffer> <Leader>d :JavaDocSearch -x declarations<cr>
 " autocmd FileType java nnoremap <silent> <buffer> <cr> :JavaSearchContext<cr>
 " autocmd FileType java nnoremap <silent> <buffer> K :JavaDocPreview<cr>
+
+" Eclim python settings
+" autocmd FileType python nnoremap <silent> <buffer> <cr> :PythonSearchContext<cr>
+" autocmd FileType python nnoremap <silent> <buffer> <cr> :DjangoContextOpen<cr>
 
 " guifont for linux
 " set guifont=Monospace\ 13
