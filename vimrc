@@ -20,11 +20,11 @@ vnoremap > >gv
 
 " Allow colors in commandline mode
 if !has("gui_running")
-    set t_Co=16
+    set t_Co=256
     " Color setting for terminal
     colorscheme torte
 else
-    set t_Co=16
+    set t_Co=256
     " Color setting for GUI
     set background=dark
     colorscheme solarized
