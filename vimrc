@@ -23,7 +23,7 @@ if !has("gui_running")
     set t_Co=256
     " Color setting for terminal
     set background=dark
-    colorscheme solarized
+    colorscheme torte
 else
     set t_Co=256
     " Color setting for GUI
