@@ -18,9 +18,17 @@ nnoremap : <Nop>
 vnoremap < <gv
 vnoremap > >gv
 
-set t_Co=256
-set background=dark
-colorscheme torte
+" Allow colors in commandline mode
+if !has("gui_running")
+    set t_Co=16
+    " Color setting for terminal
+    colorscheme torte
+else
+    set t_Co=16
+    " Color setting for GUI
+    set background=dark
+    colorscheme solarized
+endif
 
 " Alter torte's color
 autocmd ColorScheme torte highlight Pmenu ctermbg=grey guibg=grey
