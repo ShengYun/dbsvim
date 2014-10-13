@@ -22,7 +22,8 @@ vnoremap > >gv
 if !has("gui_running")
     set t_Co=256
     " Color setting for terminal
-    colorscheme torte
+    set background=dark
+    colorscheme solarized
 else
     set t_Co=256
     " Color setting for GUI
