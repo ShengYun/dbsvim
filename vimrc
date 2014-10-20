@@ -242,7 +242,7 @@ let g:neocomplcache_enable_at_startup = 1
 let g:neocomplcache_max_menu_width = 70
 nnoremap <C-\> :NeoComplCacheToggle<CR>
 
-" lock neocomplcache if writting python, jedi will take control 
+" lock neocomplcache if writting python, jedi will take control
 autocmd FileType python execute ':NeoComplCacheLock'
 
 " set foldmethod to indent if editing a python file
