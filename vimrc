@@ -312,16 +312,28 @@ let g:syntastic_python_checkers = ['python', 'pep8']
 let g:syntastic_c_checkers = ['gcc', 'cppcheck']
 let g:syntastic_cpp_checkers = ['gcc', 'cppcheck']
 
+" rainbow settings
+nnoremap <Leader>` :RainbowToggle<CR>
+let g:rainbow_active = 0
+let g:rainbow_conf = {
+    \   'guifgs': ['royalblue3', 'darkorange3', 'seagreen3', 'firebrick'],
+    \   'ctermfgs': ['darkgray', 'darkblue', 'darkmagenta', 'darkcyan'],
+    \   'operators': '_,_',
+    \   'parentheses': [['(',')'], ['\[','\]'], ['{','}']],
+    \   'separately': {
+    \       '*': {},
+    \       'vim': {
+    \           'parentheses': [['fu\w* \s*.*)','endfu\w*'], ['for','endfor'], ['while', 'endwhile'], ['if','_elseif\|else_','endif'], ['(',')'], ['\[','\]'], ['{','}']],
+    \       },
+    \       'tex': {
+    \           'parentheses': [['(',')'], ['\[','\]'], ['\\begin{.*}','\\end{.*}']],
+    \       },
+    \   }
+    \}
+
 " Fuzzyfinder
 nnoremap <Leader>u :FufTag<CR>
 nnoremap <Leader>7 :FufFile**\<CR>
-
-" rainbow-parentheses
-nnoremap <Leader>` :RainbowParenthesesToggle<CR>
-autocmd Syntax * RainbowParenthesesLoadRound    " ()
-" autocmd Syntax * RainbowParenthesesLoadSquare   " []
-" autocmd Syntax * RainbowParenthesesLoadBraces   " {}
-" autocmd Syntax * RainbowParenthesesLoadChevrons " <>
 
 " Manage split screens
 nnoremap <Leader>1 :on<CR>
