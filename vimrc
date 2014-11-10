@@ -22,12 +22,12 @@ vnoremap > >gv
 if !has("gui_running")
     set t_Co=256
     " Color setting for terminal
-    set background=dark
+    set background=light
     colorscheme solarized
 else
     set t_Co=256
     " Color setting for GUI
-    set background=dark
+    set background=light
     colorscheme solarized
 endif
 " Uncomment when terminals don't have solarized color setup
