@@ -22,18 +22,17 @@ vnoremap > >gv
 if !has("gui_running")
     set t_Co=256
     " Color setting for terminal
-    set background=light
-    colorscheme solarized
+    set background=dark
+    colorscheme lucius
 else
     set t_Co=256
     " Color setting for GUI
-    set background=light
-    colorscheme solarized
+    set background=dark
+    colorscheme lucius
 endif
+
 " Uncomment when terminals don't have solarized color setup
 " let g:solarized_termcolors=256
-
-call togglebg#map("<F9>")
 
 " Alter torte's color
 autocmd ColorScheme torte highlight Pmenu ctermbg=grey guibg=grey
