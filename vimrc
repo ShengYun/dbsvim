@@ -23,12 +23,12 @@ if !has("gui_running")
     set t_Co=256
     " Color setting for terminal
     set background=dark
-    colorscheme lucius
+    colorscheme jellybeans
 else
     set t_Co=256
     " Color setting for GUI
     set background=dark
-    colorscheme lucius
+    colorscheme jellybeans
 endif
 
 " Uncomment when terminals don't have solarized color setup
