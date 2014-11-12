@@ -23,16 +23,19 @@ if !has("gui_running")
     set t_Co=256
     " Color setting for terminal
     set background=dark
-    colorscheme jellybeans
+    colorscheme solarized
 else
     set t_Co=256
     " Color setting for GUI
     set background=dark
-    colorscheme jellybeans
+    colorscheme solarized
 endif
 
 " Uncomment when terminals don't have solarized color setup
 " let g:solarized_termcolors=256
+
+" setup dark/light toggle button
+call togglebg#map("<F9>")
 
 " Alter torte's color
 autocmd ColorScheme torte highlight Pmenu ctermbg=grey guibg=grey
