@@ -287,7 +287,7 @@ autocmd FileType python setlocal completeopt-=preview
 " set completeopt-=preview
 
 " UltiSnips config
-let g:UltiSnipsExpandTrigger = "<c-j>"
+let g:UltiSnipsExpandTrigger = "<c-k>"
 let g:UltiSnipsJumpForwardTrigger = "<tab>"
 let g:UltiSnipsJumpBackwardTrigger = "<s-tab>"
 
