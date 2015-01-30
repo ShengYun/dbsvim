@@ -11,8 +11,8 @@ let mapleader = ","
 inoremap jk <Esc>
 nnoremap j gj
 nnoremap k gk
-nnoremap <Leader>l :
-nnoremap : <Nop>
+nnoremap ; :
+nnoremap : ;
 
 " Better indentation
 vnoremap < <gv
