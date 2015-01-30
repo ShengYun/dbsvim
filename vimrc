@@ -13,6 +13,8 @@ nnoremap j gj
 nnoremap k gk
 nnoremap ; :
 nnoremap : ;
+vnoremap ; :
+vnoremap : ;
 
 " Better indentation
 vnoremap < <gv
